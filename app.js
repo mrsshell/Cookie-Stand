@@ -27,11 +27,21 @@ var store3 = {
 
 var store4 = {
   name:'Capitol Hill',
-  min/cust: 20,
-  max/cust: 38,
-  avg-sales: 2.3,
+  min: 20,
+  max: 38,
+  average sales: 2.3,
   hours:[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
-
+  var avSales = average sales;
+  var randomCustomers: function(){
+    Math.floor(Math.random() * (this.max - this.min) + this.min)    
+  }
+  salesByHour: function(){
+      for (var i = 0, i < hours.length; i++  )
+      Math.floor(avSales(randomCustomers())
+       average * hours[0]
+        return this.sales();
+    }
+  }
 }
 
 var store5  = {
