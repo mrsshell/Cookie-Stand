@@ -16,8 +16,10 @@ var store1 = {
         var cookiesPerHour = Math.round(this.averageSales * this.randomCustomers());
         this.hourlySales.push(cookiesPerHour);
         totalSales = (totalSales + cookiesPerHour);
+        this.hourlySales.push(totalSales);
     }
   },
+
   toSalesPage: function() {
     for (var i = 0; i < this.hours.length; i++) {
       var pikeStore = document.getElementById('store1');
