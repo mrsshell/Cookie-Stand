@@ -183,18 +183,19 @@ name: '1st and Pike',
 storeHours: [0],
 minCust :0,
 maxCust : 0,
-averageSales: 0;
+aveCookies: 0,
 simCookies: [],
+totalCookieSales: 0,
 randomCustomersPer Hour: function(){
-return Math.round(Math.random()) * (this.maxCust - this. minCust + 1) + this minCust);
+return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this minCust);
   },
 hourlySales: function(){
   this.simCookies = [];
   this.totalCookieSales =0,
   for (var i = 0 ; i < this.storeHours.length; i++) {
-      this.simCookies.push(Math.round(this.averageSales * this.randomCustomersPer()));
-      var hourlySales = Math.push();
-      this.totalCookieSales += hourlySales;
+    var hourlyCookieSales = Math.round(this.avSales * this.randomCustomersPerHour());
+      this.simCookies.push(hourlyCookieSales);
+      this.totalCookieSales += hourlyCookieSales;
     }
     this.simCookies.push('Total: ')
     this.
