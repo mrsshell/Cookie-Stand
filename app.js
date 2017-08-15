@@ -1,11 +1,52 @@
 'use strict';
+var storeQ ={
+  name: '1st and Pike',
+  storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
+  minCust :0,
+  maxCust : 0,
+  aveCookies: 0,
+  simCookies: [],
+  totalCookieSales: 0,
+  randomCustomersPer Hour: function(){
+    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this minCust);
+  },
+  hourlySales: function(){
+    this.simCookies = [];
+    this.totalCookieSales =0,
+    for (var i = 0 ; i < this.storeHours.length; i++) {
+      var hourlyCookieSales = Math.round(this.avSales * this.randomCustomersPerHour());
+      this.simCookies.push(hourlyCookieSales);
+      this.totalCookieSales += hourlyCookieSales;
+    }
+  },
+
+  dailySalesReport: function(){
+    this.hourlySales();
+    var storeLocation = document.getElementById('sales-report');
+    var locationName = document.createElement('h2');
+    locationName.innerText = this.name;
+    storeLocation.appendChild(loactionName);
+
+    var list = document.getElementById('ul');
+    location.appendChild('list');
+
+    for (var i = 0 ; i < this.storeHours.length; i++) {
+      var listItems = document.createElement('li');
+      listItems.innerText = this.storeHours[i]+ ':'+ this.simCookies[i] + 'cookies';
+      list.appendChild(listItems);
+    }
+    var lstItems = document.createElement('li');
+    listItems.innerText = 'Total:' + this.totalCookieSales + 'Cookies';
+    list.appendChild(listItems);
+  }
+};
 
 var store1 = {
   name: '1st and Pike',
   min: 23,
   max: 65,
   averageSales: 6.3,
-  storeHours: ['6:00 am: ''7:00 am: ', '8:00: am ', '9:00 am: ','10:00: am ','11:00: am ','12:00: pm ', '1:00: pm ', '2:00: pm: ', '3:00: pm ', '4:00: pm ', '5:00: pm ','6:00: pm ', '7:00: pm '],
+
   hourlySales: [],
   randomCustomers: function() {
     return Math.round(Math.random() * (this.max - this.min) + this.min);
@@ -178,44 +219,3 @@ var store5  = {
 //   newLi.appendChild(img);
 //   list.appendChild(newLi);
 //  }
-var sotreQ ={
-name: '1st and Pike',
-storeHours: [0],
-minCust :0,
-maxCust : 0,
-aveCookies: 0,
-simCookies: [],
-totalCookieSales: 0,
-randomCustomersPer Hour: function(){
-return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this minCust);
-  },
-hourlySales: function(){
-  this.simCookies = [];
-  this.totalCookieSales =0,
-  for (var i = 0 ; i < this.storeHours.length; i++) {
-    var hourlyCookieSales = Math.round(this.avSales * this.randomCustomersPerHour());
-      this.simCookies.push(hourlyCookieSales);
-      this.totalCookieSales += hourlyCookieSales;
-    }
-  },
-
-  dailySalesReport: function(){
-    this.hourlySales();
-    var storeLocation = document.getElementById('sales-report');
-    var locationName = document.createElement('h2');
-    locationName.innerText = this.name;
-    storeLocation.appendChild(loactionName);
-
-    var list = document.getElementById('ul');
-    location.appendChild('list');
-
-    for (var i = 0 ; i < this.storeHours.length; i++) {
-      var listItems = document.createElement('li');
-      listItems.innerText = this.storeHours[i]+ ':'+ this.simCookies[i] + 'cookies';
-      list.appendChild(listItems);
-  }
-  var lstItems = document.createElement('li');
-  listItems.innerText = 'Total:' + this.totalCookieSales + 'Cookies';
-  list.appendChild(listItems);
-  }
-};
