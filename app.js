@@ -1,60 +1,62 @@
+'use stict';
+
 var store1 = {
   name: '1st and Pike',
-  min/cust: 23,
-  max/cust: 65,
-  avg-sales: 6.3,
-  hours: [1,2,3,4,5,6,7,8,9,10,11,12]
-  var avSales = average sales;
-  var randomCustomers: function(){
+  min: 23,
+  max: 65,
+  averageSales: 6.3,
+  hours: ['7:00 am', '8:00 am', '9:00 am','10:00 am','11:00 am','12:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm','6:00 pm', '7:00 pm', '8:00 pm'],
+  hourlySales: [],
+  randomCustomers: function() {
     Math.round(Math.random() * (this.max - this.min) + this.min);
-  }
-  salesByHour: function(){
-      for (var i = 0, i < this.hours.length; i++  )
-      Math.round(avsales * randomCustomers()));
-
-        return this.avSales(this.salesByHour);
+    },
+  salesByHour: function() {
+    var totalSales = 0;
+      for (var i = 0, i < this.hours.length; i++  ) {
+      this.hourlySales.push(Math.round(averageSales * this.randomCustomers()));
     }
-  }
+    totalSales = this.sum.hourlySales * hours;
+  },
 };
 
 
 var store2 = {
   name:'SeaTac Airport',
-  min/cust: 3,
-  max/cust: 11,
-  avg-sales: 20,
-  hours:[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
-  var avSales = average sales;
-  var randomCustomers: function(){
-    Math.round(Math.random() * (this.max - this.min) + this.min);
-  }
-  salesByHour: function(){
-      for (var i = 0, i < this.hours.length; i++  )
-      Math.round(avsales * randomCustomers()));
-
-        return this.avSales(this.salesByHour);
-    }
-  }
-};
+  min: 3,
+  max: 11,
+  averageSales: 20,
+  hours: ['7:00 am', '8:00 am', '9:00 am','10:00 am','11:00 am','12:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm','6:00 pm', '7:00 pm', '8:00 pm'],
+    hourlySales: [],
+    randomCustomers: function() {
+      Math.round(Math.random() * (this.max - this.min) + this.min);
+      },
+    salesByHour: function() {
+      var totalSales = 0;
+        for (var i = 0, i < this.hours.length; i++  ) {
+        this.hourlySales.push(Math.round(averageSales * this.randomCustomers()));
+      }
+    },
+    totalSales = this.sum.hourlySales * hours;
+  };
 
 
 var store3 = {
   name:'Seattle Center'
-  min/cust:11,
-  max/cust: 38,
-  avg-sales: 3.7,
-  hours:[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
-  var avSales = average sales;
-  var randomCustomers: function(){
+  min:11,
+  max: 38,
+  avgerage sales: 3.7,
+  hours: ['7:00 am', '8:00 am', '9:00 am','10:00 am','11:00 am','12:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm','6:00 pm', '7:00 pm', '8:00 pm'],
+  hourlySales: [],
+  randomCustomers: function() {
     Math.round(Math.random() * (this.max - this.min) + this.min);
-  }
-  salesByHour: function(){
-      for (var i = 0, i < this.hours.length; i++  )
-      Math.round(avsales * randomCustomers()));
-
-        return this.avSales(this.salesByHour);
+    },
+  salesByHour: function() {
+    var totalSales = 0;
+      for (var i = 0, i < this.hours.length; i++  ) {
+      this.hourlySales.push(Math.round(averageSales * this.randomCustomers()));
     }
-  }
+  },
+  totalSales = this.sum.hourlySales * hours;
 };
 
 
@@ -63,35 +65,35 @@ var store4 = {
   min: 20,
   max: 38,
   average sales: 2.3,
-  hours:[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
-  var avSales = average sales;
-  var randomCustomers: function(){
+  hours: ['7:00 am', '8:00 am', '9:00 am','10:00 am','11:00 am','12:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm','6:00 pm', '7:00 pm', '8:00 pm'],
+  hourlySales: [],
+  randomCustomers: function() {
     Math.round(Math.random() * (this.max - this.min) + this.min);
-  }
-  salesByHour: function(){
-      for (var i = 0, i < this.hours.length; i++  )
-      Math.round(avsales * randomCustomers()));
-
-        return this.avSales(this.salesByHour);
+    },
+  salesByHour: function() {
+    var totalSales = 0;
+      for (var i = 0, i < this.hours.length; i++  ) {
+      this.hourlySales.push(Math.round(averageSales * this.randomCustomers()));
     }
-  }
+  },
+  totalSales = this.sum.hourlySales * hours;
 };
 
 var store5  = {
   name:'Alkai',
-  min/cust: 2,
-  max/cust: 16,
-  avg-sales: 4.6,
-  hours: [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
-  var avSales = average sales;
-  var randomCustomers: function(){
+  min: 2,
+  max: 16,
+  avgerage sales: 4.6,
+  hours: ['7:00 am', '8:00 am', '9:00 am','10:00 am','11:00 am','12:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm','6:00 pm', '7:00 pm', '8:00 pm'],
+  hourlySales: [],
+  randomCustomers: function() {
     Math.round(Math.random() * (this.max - this.min) + this.min);
-  }
-  salesByHour: function(){
-      for (var i = 0, i < this.hours.length; i++  )
-      Math.round(avsales * randomCustomers()));
-
-        return this.avSales(this.salesByHour);
+    },
+  salesByHour: function() {
+    var totalSales = 0;
+      for (var i = 0, i < this.hours.length; i++  ) {
+      this.hourlySales.push(Math.round(averageSales * this.randomCustomers()));
     }
-  }
+  },
+  totalSales = this.sum.hourlySales * hours;
 };
