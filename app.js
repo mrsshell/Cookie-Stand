@@ -1,7 +1,7 @@
 'use strict';
 var storeQ = {
   name: '1st and Pike',
-  storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
+  storeHours:['6am ','7am ', '8am ', '9am ','10am ','11am ','12pm ', '1pm ', '2pm ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm '],
   minCust :23,
   maxCust : 65,
   avCookies: 6.5,
@@ -43,7 +43,7 @@ var storeQ = {
 
 var storeR = {
   name: 'SeaTac Airport',
-  storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
+  storeHours: ['6am ','7am ', '8am ', '9am ','10am ','11am ','12pm ', '1pm ', '2pm ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm '],
   minCust :3,
   maxCust : 11,
   avCookies: 20,
@@ -85,7 +85,7 @@ var storeR = {
 
 var storeS = {
   name: 'Seattle Center',
-  storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
+  storeHours: ['6am ','7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm '],
   minCust : 11,
   maxCust : 38,
   avCookies: 3.7,
@@ -127,7 +127,7 @@ var storeS = {
 
 var storeT = {
   name: 'Capitol Hill',
-  storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
+  storeHours: ['6am ','7am ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm '],
   minCust :20,
   maxCust : 38,
   avCookies: 2.3,
@@ -169,7 +169,7 @@ var storeT = {
 
 var storeT = {
   name: 'Alkai',
-  storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
+  storeHours: ['6am ','7am ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm '],
   minCust :2,
   maxCust : 16,
   avCookies: 4.6,
