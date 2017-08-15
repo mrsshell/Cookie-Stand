@@ -7,8 +7,8 @@ var storeQ = {
   avCookies: 6.5,
   soldCookies: [],
   totalCookieSales: 0,
-  randomCustomersPer Hour: function(){
-    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this minCust);
+  randomCustomersPerHour: function() {
+    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust);
   },
   hourlySales: function(){
     this.soldCookies = [];
@@ -49,8 +49,8 @@ var storeR = {
   avCookies: 20,
   soldCookies: [],
   totalCookieSales: 0,
-  randomCustomersPer Hour: function(){
-    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this minCust);
+  randomCustomersPerHour: function(){
+    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust);
   },
   hourlySales: function() {
     this.soldCookies = [];
@@ -91,8 +91,8 @@ var storeS = {
   avCookies: 3.7,
   soldCookies: [],
   totalCookieSales: 0,
-  randomCustomersPer Hour: function(){
-    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this minCust);
+  randomCustomersPerHour: function(){
+    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust);
   },
   hourlySales: function(){
     this.soldCookies = [];
@@ -133,8 +133,8 @@ var storeT = {
   avCookies: 2.3,
   soldCookies: [],
   totalCookieSales: 0,
-  randomCustomersPer Hour: function(){
-    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this minCust);
+  randomCustomersPerHour: function(){
+    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust);
   },
   hourlySales: function(){
     this.soldCookies = [];
@@ -175,8 +175,8 @@ var storeT = {
   avCookies: 4.6,
   soldCookies: [],
   totalCookieSales: 0,
-  randomCustomersPer Hour: function(){
-    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this minCust);
+  randomCustomersPerHour: function(){
+    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust);
   },
   hourlySales: function(){
     this.soldCookies = [];
@@ -201,7 +201,7 @@ var storeT = {
       var listItems = document.createElement('li');
       listItems.innerText = this.storeHours[i]+ ':'+ this.soldCookies[i] + 'cookies';
       list.appendChild(listItems);
-    }
+
     var lstItems = document.createElement('li');
     listItems.innerText = 'Total:' + this.totalCookieSales + 'Cookies';
     list.appendChild(listItems);
