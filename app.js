@@ -4,7 +4,7 @@ var storeQ = {
   storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
   minCust :23,
   maxCust : 65,
-  aveCookies: 6.5,
+  avCookies: 6.5,
   soldCookies: [],
   totalCookieSales: 0,
   randomCustomersPer Hour: function(){
@@ -14,7 +14,7 @@ var storeQ = {
     this.soldCookies = [];
     this.totalCookieSales = 0;
     for (var i = 0 ; i < this.storeHours.length; i++) {
-      var hourlyCookieSales = Math.round(this.avSales * this.randomCustomersPerHour());
+      var hourlyCookieSales = Math.round(this.avCookies * this.randomCustomersPerHour());
       this.soldCookies.push(hourlyCookieSales);
       this.totalCookieSales += hourlyCookieSales;
     }
@@ -46,7 +46,7 @@ var storeR = {
   storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
   minCust :3,
   maxCust : 11,
-  aveCookies: 20,
+  avCookies: 20,
   soldCookies: [],
   totalCookieSales: 0,
   randomCustomersPer Hour: function(){
@@ -56,7 +56,7 @@ var storeR = {
     this.soldCookies = [];
     this.totalCookieSales = 0;
     for (var i = 0 ; i < this.storeHours.length; i++) {
-      var hourlyCookieSales = Math.round(this.avSales * this.randomCustomersPerHour());
+      var hourlyCookieSales = Math.round(this.avCookies * this.randomCustomersPerHour());
       this.soldCookies.push(hourlyCookieSales);
       this.totalCookieSales += hourlyCookieSales;
     }
@@ -88,7 +88,7 @@ var storeS = {
   storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
   minCust : 11,
   maxCust : 38,
-  aveCookies: 3.7,
+  avCookies: 3.7,
   soldCookies: [],
   totalCookieSales: 0,
   randomCustomersPer Hour: function(){
@@ -98,7 +98,7 @@ var storeS = {
     this.soldCookies = [];
     this.totalCookieSales = 0;
     for (var i = 0 ; i < this.storeHours.length; i++) {
-      var hourlyCookieSales = Math.round(this.avSales * this.randomCustomersPerHour());
+      var hourlyCookieSales = Math.round(this.avCookies * this.randomCustomersPerHour());
       this.soldCookies.push(hourlyCookieSales);
       this.totalCookieSales += hourlyCookieSales;
     }
@@ -130,7 +130,7 @@ var storeT = {
   storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
   minCust :20,
   maxCust : 38,
-  aveCookies: 2.3,
+  avCookies: 2.3,
   soldCookies: [],
   totalCookieSales: 0,
   randomCustomersPer Hour: function(){
@@ -140,7 +140,7 @@ var storeT = {
     this.soldCookies = [];
     this.totalCookieSales = 0;
     for (var i = 0 ; i < this.storeHours.length; i++) {
-      var hourlyCookieSales = Math.round(this.avSales * this.randomCustomersPerHour());
+      var hourlyCookieSales = Math.round(this.avCookies * this.randomCustomersPerHour());
       this.soldCookies.push(hourlyCookieSales);
       this.totalCookieSales += hourlyCookieSales;
     }
@@ -157,11 +157,11 @@ var storeT = {
 
     for (var i = 0 ; i < this.storeHours.length; i++) {
       var listItems = document.createElement('li');
-      listItems.innerText = this.storeHours[i]+ ':'+ this.soldCookies[i] + 'cookies';
+      listItems.innerText = this.storeHours[i]+ ':'+ this.soldCookies[i] + ' cookies';
       list.appendChild(listItems);
     }
     var lstItems = document.createElement('li');
-    listItems.innerText = 'Total:' + this.totalCookieSales + 'Cookies';
+    listItems.innerText = 'Total: ' + this.totalCookieSales + ' Cookies';
     list.appendChild(listItems);
   }
 };
@@ -172,7 +172,7 @@ var storeT = {
   storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
   minCust :2,
   maxCust : 16,
-  aveCookies: 4.6,
+  avCookies: 4.6,
   soldCookies: [],
   totalCookieSales: 0,
   randomCustomersPer Hour: function(){
@@ -182,7 +182,7 @@ var storeT = {
     this.soldCookies = [];
     this.totalCookieSales = 0;
     for (var i = 0 ; i < this.storeHours.length; i++) {
-      var hourlyCookieSales = Math.round(this.avSales * this.randomCustomersPerHour());
+      var hourlyCookieSales = Math.round(this.avCookies * this.randomCustomersPerHour());
       this.soldCookies.push(hourlyCookieSales);
       this.totalCookieSales += hourlyCookieSales;
     }
