@@ -2,20 +2,20 @@
 var storeQ ={
   name: '1st and Pike',
   storeHours: ['6am: ''7am: ', '8am ', '9am: ','10am ','11am ','12pm ', '1pm ', '2pm: ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm'],
-  minCust :0,
-  maxCust : 0,
-  aveCookies: 0,
-  simCookies: [],
+  minCust :23,
+  maxCust : 65,
+  aveCookies: 6.5,
+  soldCookies: [],
   totalCookieSales: 0,
   randomCustomersPer Hour: function(){
     return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this minCust);
   },
   hourlySales: function(){
-    this.simCookies = [];
+    this.soldCookies = [];
     this.totalCookieSales =0,
     for (var i = 0 ; i < this.storeHours.length; i++) {
       var hourlyCookieSales = Math.round(this.avSales * this.randomCustomersPerHour());
-      this.simCookies.push(hourlyCookieSales);
+      this.soldCookies.push(hourlyCookieSales);
       this.totalCookieSales += hourlyCookieSales;
     }
   },
@@ -32,7 +32,7 @@ var storeQ ={
 
     for (var i = 0 ; i < this.storeHours.length; i++) {
       var listItems = document.createElement('li');
-      listItems.innerText = this.storeHours[i]+ ':'+ this.simCookies[i] + 'cookies';
+      listItems.innerText = this.storeHours[i]+ ':'+ this.soldCookies[i] + 'cookies';
       list.appendChild(listItems);
     }
     var lstItems = document.createElement('li');
