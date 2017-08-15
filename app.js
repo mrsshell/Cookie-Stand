@@ -201,17 +201,16 @@ hourlySales: function(){
 
   dailySalesReport: function(){
     this.hourlySales();
-    var storeLocation = document.getElementById('sales-sesction');
+    var storeLocation = document.getElementById('sales-report');
     var locationName = document.createElement('h2');
     locationName.innerText = this.name;
     storeLocation.appendChild(loactionName);
     var list = document.getElementById('ul');
     location.appendChild('list');
 
-    for ()  var i = 0 ; i < this.storeHours.length; i++0) {
+    for (var i = 0 ; i < this.storeHours.length; i++) {
       var listItems = document.createElement('li');
-      listItems.innerText = this.storeHours[i]+ ';'+ this.simCookies[i] + 'cookies';
-
+      listItems.innerText = this.storeHours[i]+ ':'+ this.simCookies[i] + 'cookies';
       list.appendChild(listItems);
   }
   listItems.innerText = document.createElement'Total:'
