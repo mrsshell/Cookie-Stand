@@ -197,16 +197,14 @@ hourlySales: function(){
       this.simCookies.push(hourlyCookieSales);
       this.totalCookieSales += hourlyCookieSales;
     }
-    this.simCookies.push('Total: ')
-    this.
   },
 
   dailySalesReport: function(){
     this.hourlySales();
-    var storeLocation = document.getElementById('list');
+    var storeLocation = document.getElementById('sales-sesction');
     var locationName = document.createElement('h2');
     locationName.innerText = this.name;
-    location.appendChild(loactionName);
+    storeLocation.appendChild(loactionName);
     var list = document.getElementById('ul');
     location.appendChild('list');
 
