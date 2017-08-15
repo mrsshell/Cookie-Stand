@@ -205,6 +205,7 @@ hourlySales: function(){
     var locationName = document.createElement('h2');
     locationName.innerText = this.name;
     storeLocation.appendChild(loactionName);
+
     var list = document.getElementById('ul');
     location.appendChild('list');
 
@@ -213,27 +214,8 @@ hourlySales: function(){
       listItems.innerText = this.storeHours[i]+ ':'+ this.simCookies[i] + 'cookies';
       list.appendChild(listItems);
   }
-  listItems.innerText = document.createElement'Total:'
-+ this.totalCookieSales + 'cookies';
-
-list.simCookies};
-
-//generate sales
-// declare a variable named list that selectd a ul to fill with data=
-// document.getElementById("list")
-// create a loop
-// set starting and stopping point in iteration
-// create and new variable for new list items
-// change the inner text of new list to be the values of the store hours array
-// append the new list
-storeQ.hourlySales: function();
-var list = document.getElementById('list');
-
-for (var i = 0; i <storeQ.storeHours.length; i++) {
-  var  listItems = document.createElement('li');
-  new.innerText = i;
-  listItems.innerText = storeQ.storeHours[i] + 'storeQ.simCookies[i]' + 'Cookies ';
-  list.appendChild
+  var lstItems = document.createElement('li');
+  listItems.innerText = 'Total:' + this.totalCookieSales + 'Cookies';
   list.appendChild(listItems);
-}
-pike.dailySalesReport();
+  }
+};
