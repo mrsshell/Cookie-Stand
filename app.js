@@ -1,4 +1,5 @@
 'use strict';
+
 var storeQ = {
   name: '1st and Pike',
   storeHours:['6am ','7am ', '8am ', '9am ','10am ','11am ','12pm ', '1pm ', '2pm ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm '],
@@ -8,7 +9,7 @@ var storeQ = {
   soldCookies: [],
   totalCookieSales: 0,
   randomCustomersPerHour: function() {
-    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust);
+    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust;
   },
   hourlySales: function(){
     this.soldCookies = [];
@@ -26,20 +27,19 @@ var storeQ = {
     locationName.innerText = this.name;
     storeLocation.appendChild(locationName);
 
-    var list = document.getElementById('ul');
-    location.appendChild('list');
+    var list = document.createElement('ul');
+    storeLocation.appendChild(list);
 
     for (var i = 0 ; i < this.storeHours.length; i++) {
       var listItems = document.createElement('li');
-      listItems.innerText = this.storeHours[i]+ ':'+ this.soldCookies[i] + 'cookies';
+      listItems.innerText = this.storeHours[i] + ':' + this.soldCookies[i] + 'cookies';
       list.appendChild(listItems);
     }
-    var lstItems = document.createElement('li');
+    var listItems = document.createElement('li');
     listItems.innerText = 'Total:' + this.totalCookieSales + 'Cookies';
     list.appendChild(listItems);
   }
 };
-
 
 var storeR = {
   name: 'SeaTac Airport',
@@ -50,7 +50,7 @@ var storeR = {
   soldCookies: [],
   totalCookieSales: 0,
   randomCustomersPerHour: function(){
-    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust);
+    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust;
   },
   hourlySales: function() {
     this.soldCookies = [];
@@ -73,7 +73,7 @@ var storeR = {
 
     for (var i = 0 ; i < this.storeHours.length; i++) {
       var listItems = document.createElement('li');
-      listItems.innerText = this.storeHours[i]+ ':'+ this.soldCookies[i] + 'cookies';
+      listItems.innerText = this.storeHours[i] + ':' + this.soldCookies[i] + 'cookies';
       list.appendChild(listItems);
     }
     var lstItems = document.createElement('li');
@@ -81,7 +81,6 @@ var storeR = {
     list.appendChild(listItems);
   }
 };
-
 
 var storeS = {
   name: 'Seattle Center',
@@ -92,7 +91,7 @@ var storeS = {
   soldCookies: [],
   totalCookieSales: 0,
   randomCustomersPerHour: function(){
-    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust);
+    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust;
   },
   hourlySales: function(){
     this.soldCookies = [];
@@ -115,7 +114,7 @@ var storeS = {
 
     for (var i = 0 ; i < this.storeHours.length; i++) {
       var listItems = document.createElement('li');
-      listItems.innerText = this.storeHours[i]+ ':'+ this.soldCookies[i] + 'cookies';
+      listItems.innerText = this.storeHours[i] + ':' + this.soldCookies[i] + 'cookies';
       list.appendChild(listItems);
     }
     var lstItems = document.createElement('li');
@@ -123,7 +122,7 @@ var storeS = {
     list.appendChild(listItems);
   }
 };
-
+storeQ.dailySalesReport();
 
 var storeT = {
   name: 'Capitol Hill',
@@ -134,7 +133,7 @@ var storeT = {
   soldCookies: [],
   totalCookieSales: 0,
   randomCustomersPerHour: function(){
-    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust);
+    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust;
   },
   hourlySales: function(){
     this.soldCookies = [];
@@ -157,7 +156,7 @@ var storeT = {
 
     for (var i = 0 ; i < this.storeHours.length; i++) {
       var listItems = document.createElement('li');
-      listItems.innerText = this.storeHours[i]+ ':'+ this.soldCookies[i] + ' cookies';
+      listItems.innerText = this.storeHours[i] + ':' + this.soldCookies[i] + ' cookies';
       list.appendChild(listItems);
     }
     var lstItems = document.createElement('li');
@@ -176,7 +175,7 @@ var storeT = {
   soldCookies: [],
   totalCookieSales: 0,
   randomCustomersPerHour: function(){
-    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust);
+    return Math.round(Math.random()) * (this.maxCust - this.minCust + 1) + this.minCust;
   },
   hourlySales: function(){
     this.soldCookies = [];
@@ -199,15 +198,15 @@ var storeT = {
 
     for (var i = 0 ; i < this.storeHours.length; i++) {
       var listItems = document.createElement('li');
-      listItems.innerText = this.storeHours[i]+ ':'+ this.soldCookies[i] + 'cookies';
+      listItems.innerText = this.storeHours[i] + ':' + this.soldCookies[i] + 'cookies';
       list.appendChild(listItems);
 
-    var lstItems = document.createElement('li');
-    listItems.innerText = 'Total:' + this.totalCookieSales + 'Cookies';
-    list.appendChild(listItems);
+      var lstItems = document.createElement('li');
+      listItems.innerText = 'Total:' + this.totalCookieSales + 'Cookies';
+      list.appendChild(listItems);
+    }
   }
 };
-
 
 
 
@@ -234,4 +233,3 @@ var storeT = {
 //   newLi.innerText = i; // <--- if you want to change the inner text
 //   newLi.appendChild(img);
 //   list.appendChild(newLi);
-//  }
