@@ -24,7 +24,7 @@ var storeQ = {
     var storeLocation = document.getElementById('sales-report');
     var locationName = document.createElement('h2');
     locationName.innerText = this.name;
-    storeLocation.appendChild(loactionName);
+    storeLocation.appendChild(locationName);
 
     var list = document.getElementById('ul');
     location.appendChild('list');
@@ -66,7 +66,7 @@ var storeR = {
     var storeLocation = document.getElementById('sales-report');
     var locationName = document.createElement('h2');
     locationName.innerText = this.name;
-    storeLocation.appendChild(loactionName);
+    storeLocation.appendChild(locationName);
 
     var list = document.getElementById('ul');
     location.appendChild('list');
@@ -108,7 +108,7 @@ var storeS = {
     var storeLocation = document.getElementById('sales-report');
     var locationName = document.createElement('h2');
     locationName.innerText = this.name;
-    storeLocation.appendChild(loactionName);
+    storeLocation.appendChild(locationName);
 
     var list = document.getElementById('ul');
     location.appendChild('list');
@@ -150,7 +150,7 @@ var storeT = {
     var storeLocation = document.getElementById('sales-report');
     var locationName = document.createElement('h2');
     locationName.innerText = this.name;
-    storeLocation.appendChild(loactionName);
+    storeLocation.appendChild(locationName);
 
     var list = document.getElementById('ul');
     location.appendChild('list');
@@ -192,7 +192,7 @@ var storeT = {
     var storeLocation = document.getElementById('sales-report');
     var locationName = document.createElement('h2');
     locationName.innerText = this.name;
-    storeLocation.appendChild(loactionName);
+    storeLocation.appendChild(locationName);
 
     var list = document.getElementById('ul');
     location.appendChild('list');
