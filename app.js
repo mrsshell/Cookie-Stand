@@ -20,6 +20,11 @@ var store1 = {
         return ('Total' + totalSales);
     }
   },
+  toSalesPage: function() {
+    for (var i = 0; i < this.hours.length + 1; i++) {
+      var getElementById = store1
+    }
+  }
 };
 
 // totalSales = this.sum.hourlySales * hours;
