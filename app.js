@@ -9,20 +9,21 @@ stotr.maxCust = [65, 24, 38, 38, 16];
 store.avCookies = [6.3, 1.2, 3.7, 2.3, 4.6];
 
 store.getHourlySales = function(){
-  this.avCookies * this.ranCustPerHour;
-  return this.store.hourlySales = [];
   store.ranCustPerHour = function(){
     var number = Math.round(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
     return number;
   };
-};
+  for (var i = 0; i < store.Hours.length; i++) {
+    storeHours.push(this.avCookies * this.ranCustPerHour);
+    storeHours[i],
+
+
 store.getTotalCookieSales = function(){
   for (var i = 0 ; i < this.store.hours.length - 1; i++){
     this.store.totalCookieSales = this.store.hourlySales[i]++;
-    return this.store.totalCookieSales = [];
+    return this.store.totalCookieSales = [i];
   }
 };
-
 
 var storeQ = {
   name: '1st and Pike',
