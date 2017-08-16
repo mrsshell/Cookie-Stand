@@ -3,22 +3,22 @@
 var Store = new Object();
 store.name = ['1st and Pike','SeaTac Airport', 'Seattle Center',
   'Capitol Hill', 'Alkai'];
-store.hours = ['6am ','7am ','8am ','9am ', '10am ', '11am ','12pm ','1pm ', '2pm ', '3pm ','4pm ', '5pm ','6pm ','7pm ','8pm '];
+store.hours = ['6am ','7am ','8am ','9am ', '10am ', '11am ','12pm ','1pm ', '2pm ', '3pm ','4pm ', '5pm ','6pm ','7pm ','8pm ','Total '];
 store.minCust = [23, 3, 11, 20, 2];
 stotr.maxCust = [65, 24, 38, 38, 16];
 store.avCookies = [6.3, 1.2, 3.7, 2.3, 4.6];
 store.hourlySales = [ ];
 store.totalCookieSales = [];
 
-store.soldPerHour = function(){
+store.getHourlySales = function(){
   this.avCookies.push(hourlySales) * this.ranCustPerHour;
   store.ranCustPerHour = function(){
     var number = Math.round(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
     return number;
-    store.totalCookieSales = function(){
-      this.hourlySales * this.store.hours;
-      push(this.totalCookieSales);
-    };
+  };
+  store.getTotalCookieSales = function(){
+    this.hourlySales * this.store.hours;
+    push(this.totalCookieSales);
   };
 };
 
