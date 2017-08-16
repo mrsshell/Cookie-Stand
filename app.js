@@ -1,9 +1,9 @@
 'use strict';
 
-var Store = new Object();
+var store = new Object();
 store.name = ['1st and Pike','SeaTac Airport', 'Seattle Center',
   'Capitol Hill', 'Alkai'];
-store.hours = ['6am ','7am ','8am ','9am ', '10am ', '11am ','12pm ','1pm ', '2pm ', '3pm ','4pm ', '5pm ','6pm ','7pm ','8pm ','Total '];
+store.hours = ['','6am ','7am ','8am ','9am ', '10am ', '11am ','12pm ','1pm ', '2pm ', '3pm ','4pm ', '5pm ','6pm ','7pm ','8pm '];
 store.minCust = [23, 3, 11, 20, 2];
 stotr.maxCust = [65, 24, 38, 38, 16];
 store.avCookies = [6.3, 1.2, 3.7, 2.3, 4.6];
@@ -14,7 +14,7 @@ store.hourlySales = function(){
   this.soldCookies = [];
   this.totalCookieSales = 0;
   randomCustomersPerHour = function() {
-    for (var i = 0 ; i < this.storeHours.length - 1; i++) {
+    for (var i = 0 ; i < this.storeHours.length; i++) {
       var hourlyCookieSales = Math.round(this.avCookies * this.randomCustomersPerHour());
       this.soldCookies.push(hourlyCookieSales);
       this.totalCookieSales += hourlyCookieSales;
@@ -40,6 +40,12 @@ store.hourlySales = function(){
     list.appendChild(listItems);
   };
 };
+
+function Store(hours, totalCookieSales){
+  for (var i = 0; i < this.storeHours.length -1; i++){
+    var t
+  }
+
 // var storeQ = {
 //   name: '1st and Pike',
 //   storeHours:['6am ','7am ', '8am ', '9am ','10am ','11am ','12pm ', '1pm ', '2pm ', '3pm ', '4pm ', '5pm ','6pm ', '7pm ','8pm '],
