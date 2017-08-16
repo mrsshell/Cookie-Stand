@@ -7,17 +7,17 @@ store.hours = ['6am ','7am ','8am ','9am ', '10am ', '11am ','12pm ','1pm ', '2p
 store.minCust = [23, 3, 11, 20, 2];
 stotr.maxCust = [65, 24, 38, 38, 16];
 store.avCookies = [6.3, 1.2, 3.7, 2.3, 4.6];
-store.hourlySales = [ ];
 store.totalCookieSales = [];
 
 store.getHourlySales = function(){
+  store.hourlySales = [];
   this.avCookies.push(hourlySales) * this.ranCustPerHour;
   store.ranCustPerHour = function(){
     var number = Math.round(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
     return number;
   };
   store.getTotalCookieSales = function(){
-    this.hourlySales * this.store.hours;
+    sum.this.hourlySales * this.store.hours.lenght - 1;
     push(this.totalCookieSales);
   };
 };
