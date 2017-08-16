@@ -15,12 +15,12 @@ store.getHourlySales = function(){
     var number = Math.round(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
     return number;
   };
-  store.getTotalCookieSales = function(){
-    for (var i = 0 ; i < this.store.hours.length - 1; i++){
-      this.store.totalCookieSales = this.store.hourlySales[i]++;
-      return this.store.totalCookieSales = [];
-    }
-  };
+};
+store.getTotalCookieSales = function(){
+  for (var i = 0 ; i < this.store.hours.length - 1; i++){
+    this.store.totalCookieSales = this.store.hourlySales[i]++;
+    return this.store.totalCookieSales = [];
+  }
 };
 
 
