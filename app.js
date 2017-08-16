@@ -1,26 +1,26 @@
 'use strict';
 
-var store = new Object();
-store.name = ['1st and Pike','SeaTac Airport', 'Seattle Center',
+function Store (name, hours,soldCookies, totalCookieSales){
+this.name = [,'1st and Pike','SeaTac Airport', 'Seattle Center',
   'Capitol Hill', 'Alkai'];
-store.hours = ['','6am ','7am ','8am ','9am ', '10am ', '11am ','12pm ','1pm ', '2pm ', '3pm ','4pm ', '5pm ','6pm ','7pm ','8pm '];
-store.minCust = [23, 3, 11, 20, 2];
-stotr.maxCust = [65, 24, 38, 38, 16];
-store.avCookies = [6.3, 1.2, 3.7, 2.3, 4.6];
-store.soldCookies = [],
-store.totalCookieSales = 0,
+this.hours = ['6am ','7am ','8am ','9am ', '10am ', '11am ','12pm ','1pm ', '2pm ', '3pm ','4pm ', '5pm ','6pm ','7pm ','8pm '];
+this.minCust = [,23, 3, 11, 20, 2];
+this.maxCust = [65, 24, 38, 38, 16];
+this.avCookies = [6.3, 1.2, 3.7, 2.3, 4.6];
+this.soldCookies = [],
+this.totalCookieSales = 0,
 
-store.hourlySales = function(){
+this.hourlySales = function(){
   this.soldCookies = [];
   this.totalCookieSales = 0;
   randomCustomersPerHour = function() {
-    for (var i = 0 ; i < this.storeHours.length; i++) {
+    for (var i = 0 ; i < this.storeHours.length ; i++) {
       var hourlyCookieSales = Math.round(this.avCookies * this.randomCustomersPerHour());
       this.soldCookies.push(hourlyCookieSales);
       this.totalCookieSales += hourlyCookieSales;
     }
   };
-  store.dailySalesReport = function(){
+this.dailySalesReport = function(){
     this.hourlySales();
     var storeLocation = document.getElementById('sales-report');
     var locationName = document.createElement('h2');
@@ -35,16 +35,17 @@ store.hourlySales = function(){
       listItems.innerText = this.storeHours[i] + ':' + this.soldCookies[i] + ' cookies';
       list.appendChild(listItems);
     }
-    var listItems = document.createElement('li');
-    listItems.innerText = 'Total:' + this.totalCookieSales + ' cookies';
-    list.appendChild(listItems);
+    // var listItems = document.createElement('li');
+    // listItems.innerText = 'Total:' + this.totalCookieSales + ' cookies';
+    // list.appendChild(listItems);
   };
 };
 
-function Store(hours, totalCookieSales){
-  for (var i = 0; i < this.storeHours.length -1; i++){
-    var t
+var stores = new Store (name, soldCookies, totalCookieSales);{
+ for (var i = 0; i < this.storeHours.length; i++) {
+ store.push(new Stores(this.name[i], this.soldCookies[i], this.totalCookieSales[i])
   }
+};
 
 // var storeQ = {
 //   name: '1st and Pike',
