@@ -1,9 +1,9 @@
 'use strict';
 
-var hours = ['6am ','7am ','8am ','9am ', '10am ', '11am ','12pm ','1pm ', '2pm ', '3pm ','4pm ', '5pm ','6pm ','7pm ','8pm '];
+var hours = [' ','6am ','7am ','8am ','9am ', '10am ', '11am ','12pm ','1pm ', '2pm ', '3pm ','4pm ', '5pm ','6pm ','7pm ','8pm '];
 var totalAllStores = 0;
 
-function Store (name, hours,soldCookies, totalCookieSales){
+ function Store (name, hours,soldCookies, totalCookieSales){
 this.name = name;
 this.minCust = minCust;
 this.maxCust = maxCust;
@@ -15,7 +15,7 @@ this.hourlySales = function(){
   this.soldCookies = [];
   this.totalCookieSales = 0;
   randomCustomersPerHour = function() {
-    for (var i = 0 ; i < hours.length ; i++) {
+    for (var i = 0 ; i < hours.length - 1; i++) {
       var hourlyCookieSales = Math.round(this.avCookies * this.randomCustomersPerHour());
       this.soldCookies.push(hourlyCookieSales);
       this.totalCookieSales += hourlyCookieSales;
@@ -23,17 +23,19 @@ this.hourlySales = function(){
   };
 this.dailySalesReport = function(){
     this.hourlySales();
-    var storeLocation = document.getElementById('sales-report');
-    var locationName = document.createElement('h2');
-    locationName.innerText = this.name;
-    storeLocation.appendChild(locationName);
+    var tableLoco = document.getElementById('salesTable');
+    var locoRow = document.createElement('tr');
+    var name = this.name;
+    locoRow.id = name;
+    locoRow.innerText = name;
+    tableLoco.appendChild(locoRow);
 
-    var list = document.createElement('ul');
-    storeLocation.appendChild(list);
+    // var list = document.createElement('ul');
+    // storeLocation.appendChild(list);
 
-    for (var i = 0 ; i < this.storeHours.length; i++) {
+    for (var i = 0 ; i < hours.length - 1; i++) {
       var listItems = document.createElement('li');
-      listItems.innerText = this.storeHours[i] + ':' + this.soldCookies[i] + ' cookies';
+      listItems.innerText = hours[i] + ':' + this.soldCookies[i] + ' cookies';
       list.appendChild(listItems);
     }
     var listItems = document.createElement('li');
@@ -41,6 +43,38 @@ this.dailySalesReport = function(){
      list.appendChild(listItems);
   };
 };
+var makeTable = function(){
+  var tableSpot = document.getElementById('sales-report');
+  var tab = document.createElement('table');
+  tab.id = 'salesTable';
+  tableSpot.appendChild(tab);
+};
+
+var tableHeader = function(){
+  var findTable = document.getElementById('salesTable');
+  var headRow = document.createElement('tr');
+  headRow.id = 'firstRow';
+  findTable.appendChild(headRow);
+  for (var i = 0; i < hours.length; i++) {
+    var makeHeading = document.createElement('th');
+    var headingText = hours[i];
+    makeHeading.innerText = headingText;
+    headRow.appendChild(makeHeading);
+  }
+};
+
+makeTable();
+tableHeader();
+// var tableData = function(){
+//   tableData.innerText = hourlySales;
+//
+// }
+//
+// var tableFoot = function()
+
+
+
+
 var stAndPike = new Store('1st and Pike',23 ,65 ,6.3);
 var SeaTac = new Store('SeaTac Airport', 3 ,24, 1.2);
 var seattleCenter = new Store('Seattle Center', 11 , 38 , 3.7);
