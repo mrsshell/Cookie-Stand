@@ -60,18 +60,15 @@ var makeReport = function(){
     storeRow.id = 'store' + i;
     var nameThis = document.getElementById('store' + i);
     nameThis.appendChild(nameLabel);
-
      var s = 0;
      for (var j = 0; j < soldCookies.length; j++) {
        var numCookiesSold = document.createElement('td');
        numCookiesSold.innerText = soldCookies[j];
-
-       var for loc getElby ('store' + s)
-       append the (td )to the loc row
+       var attachTo = document.getElementById('store' + s);
+       attachTo.appendChild(numCookiesSold);
         if (j === soldCookies.length) {
           s++
-        }
-
+      };
     }
   };
   makeReport();
