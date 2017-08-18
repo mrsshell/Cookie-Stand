@@ -63,8 +63,8 @@ var makeReport = function(){
 
      var s = 0;
      for (var j = 0; j < soldCookies.length; j++) {
-       make a (td)
-       name of (td).innerText = soldCookies[j];
+       var numCookiesSold = document.createElement('td');
+       numCookiesSold.innerText = soldCookies[j];
 
        var for loc getElby ('store' + s)
        append the (td )to the loc row
