@@ -1,11 +1,4 @@
 'use strict';
-var makeTable = function(){
-  var tableSpot = document.getElementById('sales-report');
-  var tab = document.createElement('table');
-  tab.id = 'salesTable';
-  tableSpot.appendChild(tab);
-};
-makeTable();
 
 var storeNames = ['1st and Pike', 'SeaTac Airport', 'Seattle Center', 'Capitol Hill', 'Alki'];
 var hours = ['6am ','7am ','8am ','9am ', '10am ', '11am ','12pm ','1pm ', '2pm ', '3pm ','4pm ', '5pm ','6pm ','7pm '];
@@ -17,22 +10,27 @@ function Store (name, minCust, maxCust, avCookies){
   this.maxCust = maxCust;
   this.avCookies = avCookies;
   this.soldCookies = [];
-  // this.totalCookieSales = 0;
+  this.totalCookieSales = 0;
   this.randomCustomersPerHour = function() {
     var number = Math.round(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
     return number;
   };
   this.hourlySales = function(){
     this.soldCookies = [];
-    // this.totalCookieSales = 0;
+    this.totalCookieSales = 0;
     for (var i = 0 ; i < hours.length; i++) {
       var hourlyCookieSales = Math.round(this.avCookies * this.randomCustomersPerHour());
       this.soldCookies.push(hourlyCookieSales);
-      // this.totalCookieSales += hourlyCookieSales;
+      this.totalCookieSales += hourlyCookieSales;
     }
-  };
 };
-
+var makeTable = function(){
+  var tableSpot = document.getElementById('sales-report');
+  var tab = document.createElement('table');
+  tab.id = 'salesTable';
+  tableSpot.appendChild(tab);
+};
+makeTable();
 var makeHeader = function() {
   var salesHeader = document.getElementById('salesTable');
   var headerData = document.createElement('tr');
@@ -50,7 +48,6 @@ var makeHeader = function() {
   headerData.appendChild(endCell);
 };
 makeHeader();
-
 var makeReport = function(){
   var salesReport = document.getElementById('salesTable');
   for (var i = 0; i < storeNames.length; i++) {
@@ -63,9 +60,9 @@ var makeReport = function(){
     nameThis.appendChild(nameLabel);
     //this should fill with number of cookies sold per hour from the array sold cookies which it does not do
     var s = 0;
-    for (var j = 0; j < soldCookies.length; j++) {
+    for (var j = 0; j < this.soldCookies.length; j++) {
       var numCookiesSold = document.createElement('td');
-      numCookiesSold.innerText = soldCookies[j];
+      numCookiesSold.innerText = this.soldCookies[j];
       var attachTo = document.getElementById('store' + s);
       attachTo.appendChild(numCookiesSold);
       if (j === soldCookies.length) {
@@ -75,7 +72,6 @@ var makeReport = function(){
   }
 };
 makeReport();
-
 var makeFooter = function(){
   var tableBottom = document.getElementById('salesTable');
   var footerSpace = document.createElement('tr');
