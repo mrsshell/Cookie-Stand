@@ -1,6 +1,13 @@
 'use strict';
 
-var storeNames = ['1st and Pike', 'SeaTac Airport', 'Seattle Center', 'Capitol Hill', 'Alki'];
+var makeTable = function(){
+  var tableSpot = document.getElementById('sales-report');
+  var tab = document.createElement('table');
+  tab.id = 'salesTable';
+  tableSpot.appendChild(tab);
+};
+makeTable();
+
 var hours = ['6am ','7am ','8am ','9am ', '10am ', '11am ','12pm ','1pm ', '2pm ', '3pm ','4pm ', '5pm ','6pm ','7pm '];
 var totalAllStores = 0;
 
@@ -11,73 +18,89 @@ function Store (name, minCust, maxCust, avCookies){
   this.avCookies = avCookies;
   this.soldCookies = [];
   this.totalCookieSales = 0;
-  this.randomCustomersPerHour = function() {
-    var number = Math.round(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-    return number;
-  };
-  this.hourlySales = function(){
-    this.soldCookies = [];
-    this.totalCookieSales = 0;
-    for (var i = 0 ; i < hours.length; i++) {
-      var hourlyCookieSales = Math.round(this.avCookies * this.randomCustomersPerHour());
-      this.soldCookies.push(hourlyCookieSales);
-      this.totalCookieSales += hourlyCookieSales;
+  this.storeNames = [];
+
+  this.makeHeader = function() {
+    var salesHeader = document.getElementById('salesTable');
+    var headerData = document.createElement('tr');
+    headerData.id = 'header';
+    salesHeader.appendChild(headerData);
+    var nada = document.createElement('th');
+    headerData.appendChild(nada);
+    for (var i = 0; i < hours.length; i++) {
+      var open = document.createElement('th');
+      open.innerText = hours[i];
+      headerData.appendChild(open);
     }
-};
-var makeTable = function(){
-  var tableSpot = document.getElementById('sales-report');
-  var tab = document.createElement('table');
-  tab.id = 'salesTable';
-  tableSpot.appendChild(tab);
-};
-makeTable();
-var makeHeader = function() {
-  var salesHeader = document.getElementById('salesTable');
-  var headerData = document.createElement('tr');
-  headerData.id = 'header';
-  salesHeader.appendChild(headerData);
-  var blank = document.createElement('th');
-  headerData.appendChild(blank);
-  for (var i = 0; i < hours.length; i++) {
-    var open = document.createElement('th');
-    open.innerText = hours[i];
-    headerData.appendChild(open);
-  }
-  var endCell = document.createElement('td');
-  endCell.innerText = ('Totals!');
-  headerData.appendChild(endCell);
-};
-makeHeader();
-var makeReport = function(){
-  var salesReport = document.getElementById('salesTable');
-  for (var i = 0; i < storeNames.length; i++) {
-    var storeRow = document.createElement('tr');
-    var nameLabel = document.createElement('td');
-    nameLabel.innerText = storeNames[i];
-    salesReport.appendChild(storeRow);
-    storeRow.id = 'store' + i;
-    var nameThis = document.getElementById('store' + i);
-    nameThis.appendChild(nameLabel);
-    //this should fill with number of cookies sold per hour from the array sold cookies which it does not do
-    var s = 0;
-    for (var j = 0; j < this.soldCookies.length; j++) {
-      var numCookiesSold = document.createElement('td');
-      numCookiesSold.innerText = this.soldCookies[j];
-      var attachTo = document.getElementById('store' + s);
-      attachTo.appendChild(numCookiesSold);
-      if (j === soldCookies.length) {
-        s++;
+    var endCell = document.createElement('td');
+    endCell.innerText = ('Totals!');
+    headerData.appendChild(endCell);
+  };
+  this.makeHeader();
+
+  this.makeReport = function(){
+    var salesReport = document.getElementById('header');
+
+    this.customersPerHour = function() {
+      var number = Math.round(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+      return number;
+    };
+    this.hourlySales = function(){
+      this.soldCookies = [];
+      this.totalCookieSales = 0;
+      for (var i = 0 ; i < hours.length; i++) {
+        var hourlyCookieSales = Math.round(this.avCookies * this.customersPerHour());
+        this.soldCookies.push(hourlyCookieSales);
+        this.totalCookieSales += hourlyCookieSales;
+      }
+    };
+    this.hourlySales();
+
+    for (var i = 0; i < storeNames.length; i++) {
+      var storeRow = document.createElement('tr');
+      var nameLabel = document.createElement('td');
+      nameLabel.innerText = storeNames[i];
+      salesReport.appendChild(storeRow);
+      storeRow.id = 'store' + i;
+      var nameThis = document.getElementById('store' + i);
+      nameThis.appendChild(nameLabel);
+      //this should fill with number of cookies sold per hour from the array sold cookies which it does not do
+      var s = 0;
+      for (var j = 0; j < this.soldCookies.length; j++) {
+        var numCookiesSold = document.createElement('td');
+        numCookiesSold.innerText = this.soldCookies[j];
+        var attachTo = document.getElementById('store' + s);
+        attachTo.appendChild(numCookiesSold);
+        if (j === soldCookies.length) {
+          s++;
+        }
       }
     }
   }
-};
-makeReport();
+  this.makeReport();
+}
 var makeFooter = function(){
   var tableBottom = document.getElementById('salesTable');
   var footerSpace = document.createElement('tr');
   footerSpace.id = 'footer';
-
+  tableBottom.appendChild(footerSpace);
+  var totalCell = document.createElement('td');
+  totalCell.innerText = ('Total Sales');
+  footerSpace.appendChild(totalCell);
+  for (var i = 0; i < this.soldCookies.length; i++) {
+    var storesTotalsByHour = document.createElement('td');
+    open.innerText = this.soldCookies[i];
+    totalAllStores += storesTotalsByHour;
+    totalCell.appendChild(storesTotalsByHour);
+    var tableTotal = document.createElement('td');
+    tableTotal.innerText = storesTotalsByHour++;
+    tableTotal.appendChild(storesTotalsByHour);
+  }
 };
+this.makeFooter();
+
+
+
 // }
   // var makeReport = function(){
   //   var salesReport = document.getElementById('salesTable');
