@@ -20,6 +20,17 @@ function Store (name, minCust, maxCust, avCookies){
   this.totalCookieSales = 0;
   this.storeNames = [];
 
+  this.storeBuilder = function(){
+    this.hourlySales();
+    var firstRow = document.createElement('tr');
+    var firstCell = document.createElement('td');
+    firstCell.innerText = this.storeNames[0].this.name;
+    var stAndPike = new Store('1st and Pike',23 ,65 ,6.3);
+    var SeaTac = new Store('SeaTac Airport', 3 ,24, 1.2);
+    var seattleCenter = new Store('Seattle Center', 11 , 38 , 3.7);
+    var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
+    var Alki = new Store('Alki', 2, 16, 4.6);
+  }
   this.makeHeader = function() {
     var salesHeader = document.getElementById('salesTable');
     var headerData = document.createElement('tr');
@@ -40,65 +51,70 @@ function Store (name, minCust, maxCust, avCookies){
 
   this.makeReport = function(){
     var salesReport = document.getElementById('header');
-
-    this.customersPerHour = function() {
-      var number = Math.round(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-      return number;
-    };
-    this.hourlySales = function(){
-      this.soldCookies = [];
-      this.totalCookieSales = 0;
-      for (var i = 0 ; i < hours.length; i++) {
-        var hourlyCookieSales = Math.round(this.avCookies * this.customersPerHour());
-        this.soldCookies.push(hourlyCookieSales);
-        this.totalCookieSales += hourlyCookieSales;
-      }
-    };
-    this.hourlySales();
-
+    var storeData = document.createElement('tr');
+    storeData.id = 'report';
+    salesReport.appendChild(storeData);
     for (var i = 0; i < storeNames.length; i++) {
       var storeRow = document.createElement('tr');
       var nameLabel = document.createElement('td');
       nameLabel.innerText = storeNames[i];
       salesReport.appendChild(storeRow);
-      storeRow.id = 'store' + i;
-      var nameThis = document.getElementById('store' + i);
-      nameThis.appendChild(nameLabel);
-      //this should fill with number of cookies sold per hour from the array sold cookies which it does not do
-      var s = 0;
-      for (var j = 0; j < this.soldCookies.length; j++) {
-        var numCookiesSold = document.createElement('td');
-        numCookiesSold.innerText = this.soldCookies[j];
-        var attachTo = document.getElementById('store' + s);
-        attachTo.appendChild(numCookiesSold);
-        if (j === soldCookies.length) {
-          s++;
+      this.hourlySales = function(){
+        this.customersPerHour = function() {
+          var number = Math.round(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+          return number;
+        };
+        for (var i = 0 ; i < hours.length; i++) {
+          var hourlyCookieSales = Math.round(this.avCookies * this.customersPerHour());
+          this.soldCookies.push(hourlyCookieSales);
+          this.totalCookieSales += hourlyCookieSales;
+          for (var j = 0; j < this.soldCookies.length; j++) {
+            var numCookiesSold = document.createElement('td');
+            numCookiesSold.innerText = this.soldCookies[j];
+
+      // storeRow.id = 'store' + i;
+      // var nameThis = document.getElementById('store' + i);
+      // nameThis.appendChild(nameLabel);
+      //
+      //
+      //       var attachTo = document.getElementById('store' + s);
+      //       attachTo.appendChild(numCookiesSold);
+      //       if (j === soldCookies.length) {
+      //         s++;
+      //       }
+          }
         }
-      }
+      };
+
+      //this should fill with number of cookies sold per hour from the array sold cookies which it does not do
     }
-  }
+  };
   this.makeReport();
+
+
+
 }
 var makeFooter = function(){
-  var tableBottom = document.getElementById('salesTable');
+  var tableBottom = document.getElementById('report');
   var footerSpace = document.createElement('tr');
   footerSpace.id = 'footer';
   tableBottom.appendChild(footerSpace);
   var totalCell = document.createElement('td');
   totalCell.innerText = ('Total Sales');
   footerSpace.appendChild(totalCell);
+
   for (var i = 0; i < this.soldCookies.length; i++) {
     var storesTotalsByHour = document.createElement('td');
     open.innerText = this.soldCookies[i];
     totalAllStores += storesTotalsByHour;
     totalCell.appendChild(storesTotalsByHour);
+
     var tableTotal = document.createElement('td');
     tableTotal.innerText = storesTotalsByHour++;
     tableTotal.appendChild(storesTotalsByHour);
   }
 };
 this.makeFooter();
-
 
 
 // }
@@ -190,11 +206,6 @@ this.makeFooter();
 //   lowRow.appendChild(tableFooter);
 // };
 //
-var stAndPike = new Store('1st and Pike',23 ,65 ,6.3);
-var SeaTac = new Store('SeaTac Airport', 3 ,24, 1.2);
-var seattleCenter = new Store('Seattle Center', 11 , 38 , 3.7);
-var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
-var Alki = new Store('Alki', 2, 16, 4.6);
 //
 // makeTable();
 // tableHeader();
