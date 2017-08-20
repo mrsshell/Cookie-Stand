@@ -18,19 +18,30 @@ function Store (name, minCust, maxCust, avCookies){
   this.avCookies = avCookies;
   this.soldCookies = [];
   this.totalCookieSales = 0;
-  this.storeNames = [];
+  this.storeNames = [
+    stAndPike = new Store('1st and Pike',23 ,65 ,6.3),
+    SeaTac = new Store('SeaTac Airport', 3 ,24, 1.2),
+    seattleCenter = new Store('Seattle Center', 11 , 38 , 3.7),
+    capitolHill = new Store('Capitol Hill', 20, 38, 2.3),
+    Alki = new Store('Alki', 2, 16, 4.6)];
 
   this.storeBuilder = function(){
     this.hourlySales();
     var firstRow = document.createElement('tr');
-    var firstCell = document.createElement('td');
-    firstCell.innerText = this.storeNames[0].this.name;
-    var stAndPike = new Store('1st and Pike',23 ,65 ,6.3);
-    var SeaTac = new Store('SeaTac Airport', 3 ,24, 1.2);
-    var seattleCenter = new Store('Seattle Center', 11 , 38 , 3.7);
-    var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
-    var Alki = new Store('Alki', 2, 16, 4.6);
-  }
+    var newCell = document.createElement('td');
+    newCell.innerText = this.storeNames[0].this.name;
+    firstRow.appendChild(newCell);
+    for (var i = 0; i < hours.length; i++) {
+      var dataCell = document.createElement('td');
+      dataCell.innerText = this.soldCookies[i];
+      firstRow.appendChild(dataCell);
+            // hours[i]
+    };
+    var totalsCell = document.createElement('td');
+    totalsCell.innerText = this.totalCookieSales;
+    firstRow.appendChild(totalCell);
+    table.appendChild(firstRow);
+
   this.makeHeader = function() {
     var salesHeader = document.getElementById('salesTable');
     var headerData = document.createElement('tr');
@@ -75,8 +86,6 @@ function Store (name, minCust, maxCust, avCookies){
       // storeRow.id = 'store' + i;
       // var nameThis = document.getElementById('store' + i);
       // nameThis.appendChild(nameLabel);
-      //
-      //
       //       var attachTo = document.getElementById('store' + s);
       //       attachTo.appendChild(numCookiesSold);
       //       if (j === soldCookies.length) {
@@ -85,15 +94,10 @@ function Store (name, minCust, maxCust, avCookies){
           }
         }
       };
-
-      //this should fill with number of cookies sold per hour from the array sold cookies which it does not do
     }
   };
   this.makeReport();
 
-
-
-}
 var makeFooter = function(){
   var tableBottom = document.getElementById('report');
   var footerSpace = document.createElement('tr');
@@ -115,7 +119,7 @@ var makeFooter = function(){
   }
 };
 this.makeFooter();
-
+};
 
 // }
   // var makeReport = function(){
