@@ -104,17 +104,27 @@ var makeFooter = function(){
   footerSpace.id = 'footer';
   tableBottom.appendChild(footerSpace);
   var totalCell = document.createElement('td');
-  totalCell.innerText = ('Total Sales');
+  totalCell.innerText = ('Daily Totals');
   footerSpace.appendChild(totalCell);
+  var allSales = 0;
+  for (var i = 0; i < this.hours.length; i++) {
 
-  for (var i = 0; i < this.soldCookies.length; i++) {
+
+
+
+
+    allSales += this.storeNames[i].
     var storesTotalsByHour = document.createElement('td');
-    open.innerText = this.soldCookies[i];
+
+
+
+    // open.innerText = this.soldCookies[i];
     totalAllStores += storesTotalsByHour;
     totalCell.appendChild(storesTotalsByHour);
 
     var tableTotal = document.createElement('td');
-    tableTotal.innerText = storesTotalsByHour++;
+    tableTotal.innerText = storesTotalsByHour;
+
     tableTotal.appendChild(storesTotalsByHour);
   }
 };
