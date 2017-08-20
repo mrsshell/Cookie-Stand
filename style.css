@@ -1,23 +1,41 @@
-body{
-  font-family: sans-serif;
-  background-image: https://www.motionbackgroundsforfree.com/wp-content/uploads/2012/02/Screen-shot-2012-02-07-at-10.02.45-AM.png;
-}
-h1{
 
+header, aside, section, footer,{
+display: block;
 }
-#id "logo"{
-
+.body {
+  background:
 }
-
-#id "sales-report"
-
-table {
-  table-layout: auto;
-  width: 75%;
-  border: 1px solid red;
-}
-td {
-  border: 1px solid blue;
+header {
+  background-color: #49250B
+  height: 60px:
 }
 
-#id "big-salmon"img.setAttribute('src', 'img src=https://github.com/codefellows/seattle-201d25/commit/8c48c4225bc55d9c197a957958acaba4e0a9c4da#diff-569ca4d92443a30b113101f5e8993c47/');
+#top{
+font-family: 'Lobster', cursive;
+width: 90px;
+color: #BAF796;
+}
+
+#top2{
+font-family: 'Rajdhani', sans-serif;
+width: 30px
+color: #CCC86A;
+}
+
+
+#id logo{
+image:url(https://github.com/codefellows/seattle-201d25/blob/master/class-09-css_wireframe_part_1/lab/assets/chinook.jpg);
+width: 700px
+height
+}
+
+#id{
+table-layout: auto;
+width: 75%;
+border: 1px solid red;
+}
+
+
+.fineprint {
+font-family: 'Balthazar', serif;
+}
