@@ -1,39 +1,48 @@
 
 header, aside, section, footer,{
-display: block;
-}
-.body {
-  background:
-}
+  display: block;
+  }
+body {
+  background-image: url("http://www.planwallpaper.com/static/images/Light-Wood-Background-Wallpaper.jpg");
+  }
+
 header {
   background-color: #49250B
-  height: 60px:
 }
 
 #top{
-font-family: 'Lobster', cursive;
-font-size: 90px;
-color: #BAF796;
+  font-family: 'Lobster', cursive;
+  font-size: 90px;
+  color: #BAF796;
+  padding-left: 60px;
+
 }
 
 #top2{
-font-family: 'Rajdhani', sans-serif;
-width: 30px
-color: #CCC86A;
-}
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 50px;
+  color: #CCC86A;
+ padding-left: 60px;
 
+  }
+#more{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 35px;
+  color: #CCC86A;
+  padding-left: 30px;
+}
 
 #id logo{
-image:url(https://github.com/codefellows/seattle-201d25/blob/master/class-09-css_wireframe_part_1/lab/assets/chinook.jpg);
-width: 700px
-height
-}
+  image:url("https://github.com/codefellows/seattle-201d25/blob/master/class-09-css_wireframe_part_1/lab/assets/chinook.jpg");
+  width: 700px
+  height
+  }
 
 #id{
-table-layout: auto;
-width: 75%;
-border: 1px solid red;
-}
+  table-layout: auto;
+  width: 75%;
+  border: 1px solid red;
+  }
 
 
 .fineprint {
