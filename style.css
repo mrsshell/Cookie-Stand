@@ -15,6 +15,8 @@ header {
   font-size: 90px;
   color: #BAF796;
   padding-left: 60px;
+  margin: 0;
+  padding-top: 20px;
 
 }
 
@@ -22,29 +24,41 @@ header {
   font-family: 'Rajdhani', sans-serif;
   font-size: 50px;
   color: #CCC86A;
- padding-left: 60px;
+   padding-left: 60px;
 
   }
 #more{
   font-family: 'Rajdhani', sans-serif;
   font-size: 35px;
   color: #CCC86A;
-  padding-left: 30px;
+  padding-left: 70px;
+  padding-bottom: 30px;
+}
+#seattle{
+  padding-left: 50px;
+  max-height: 400px;
+  max-width: 700px;
 }
 
-#id logo{
-  image:url("https://github.com/codefellows/seattle-201d25/blob/master/class-09-css_wireframe_part_1/lab/assets/chinook.jpg");
-  width: 700px
-  height
+.
+#logo{
+  float: right;
+  width: 30px;
   }
 
-#id{
-  table-layout: auto;
-  width: 75%;
-  border: 1px solid red;
+#idfuture{
+  padding-left:500px
   }
 
+#idform{
+  border-width: 30%;
+
+}
 
 .fineprint {
-font-family: 'Balthazar', serif;
+  font-family: 'Balthazar', serif;
+}
+
+#id{
+
 }
