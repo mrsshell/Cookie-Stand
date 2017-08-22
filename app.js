@@ -62,12 +62,12 @@ makeHeader();
 
 var storeBuilder = function(){
   var makePatsTable = document.getElementById('fishHead');
-  var firstRow = document.createElement('tr');
-  var newCell = document.createElement('td');
-  newCell.innerText = name;
-  firstRow.appendChild(newCell);
-
+  for (var i = 0; i < storeNames.length; i++) {
+    var firstRow = document.createElement('tr');
+    newCell.innerText = storeNames[0];
+    firstRow.appendChild(newCell);
   for (var i = 0; i < hours.length; i++) {
+    var newCell = document.createElement('td');
     var dataCell = document.createElement('td');
     dataCell.innerText = soldCookies[i];
     firstRow.appendChild(dataCell);
@@ -87,8 +87,6 @@ var makeReport = function(){
   salesReport.id = ('pats-table');
 
 
-  for (var i = 0; i < storeNames.length; i++) {
-    storeNames[i].storeBuilder();
 
     for (var i = 0; i < hours.length; i++) {
 
