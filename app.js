@@ -66,32 +66,31 @@ var storeBuilder = function(){
     var firstRow = document.createElement('tr');
     newCell.innerText = storeNames[0];
     firstRow.appendChild(newCell);
-  for (var i = 0; i < hours.length; i++) {
-    var newCell = document.createElement('td');
-    var dataCell = document.createElement('td');
-    dataCell.innerText = soldCookies[i];
-    firstRow.appendChild(dataCell);
-  }
-
-  var totalsCell = document.createElement('td');
-  totalsCell.innerText = totalCookieSales;
-  firstRow.appendChild(totalCell);
-  table.appendChild(firstRow);
-};
-
-
-totalCookieSales = 0;
-var makeReport = function(){
-  var salesReport = document.getElementById;
-  var patsReport = document.createElement('tr');
-  salesReport.id = ('pats-table');
-
-
 
     for (var i = 0; i < hours.length; i++) {
+      var newCell = document.createElement('td');
+      var dataCell = document.createElement('td');
+      dataCell.innerText = soldCookies[i];
+      firstRow.appendChild(dataCell);
+    }
 
-      var grandTot = 0;
-      hours[i].getElementsById
+    var totalsCell = document.createElement('td');
+    totalsCell.innerText = totalCookieSales;
+    firstRow.appendChild(totalCell);
+    table.appendChild(firstRow);
+  };
+  totalCookieSales = 0;
+  var makeReport = function(){
+    var salesReport = document.getElementById;
+    var patsReport = document.createElement('tr');
+
+    for (var i = 0; i < hours.length; i++) {
+      totalCookieSales
+      document.createElement('td'):
+
+        break;
+      var grandTot += hours
+      .getElementsById;
 
     }
   }
