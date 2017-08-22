@@ -42,7 +42,7 @@ makeTable();
 
 var makeHeader = function() {
   var salesHeader = document.getElementById('table');
-  var headerData = document.createElement('tf');
+  var headerData = document.createElement('th');
   headerData.id = 'heading';
   salesHeader.appendChild(headerData);
   var noData = document.createElement('td');
@@ -62,10 +62,13 @@ makeHeader();
 
 var storeBuilder = function(){
   var makePatsTable = document.getElementById('heading');
+  //make an id
+
   for (var i = 0; i < storeNames.length; i++) {
     var firstRow = document.createElement('tr');
     newCell.innerText = storeNames[0];
     firstRow.appendChild(newCell);
+
     for (var i = 0; i < hours.length; i++) {
       var newCell = document.createElement('td');
       var dataCell = document.createElement('td');
@@ -187,7 +190,6 @@ addNewStore();
   //
   //   }
   // }
-{
   // //     var newCell = document.createElement('td');
   // //     var dataText = this.soldCookies[i];
   // //     newCell.innerText = dataText;
