@@ -42,7 +42,7 @@ makeTable();
 
 var makeHeader = function() {
   var salesHeader = document.getElementById('fish-table');
-  var headerData = document.createElement('tr');
+  var headerData = document.createElement('tf');
   headerData.id = 'fishHead';
   salesHeader.appendChild(headerData);
   var noData = document.createElement('td');
@@ -86,7 +86,7 @@ var storeBuilder = function(){
 
     for (var i = 0; i < hours.length; i++) {
       totalCookieSales
-      document.createElement('td'):
+      document.createElement('td');
 
         break;
       var grandTot += hours
@@ -211,28 +211,6 @@ addNewStore();
   // // allStores.push(this);
 // };
 //
-//
-// var tableHeader = function(){
-//   var findTable = document.getElementById('salesTable');
-//   var headRow = document.createElement('tr');
-//   headRow.id = 'firstRow';
-//   findTable.appendChild(headRow);
-//   for (var i = 0; i < hours.length; i++) {
-//     var makeHeading = document.createElement('th');
-//     var headingText = hours[i];
-//     makeHeading.innerText = headingText;
-//     headRow.appendChild(makeHeading);
-//
-///
-//
-// makeTable();
-// tableHeader();
-// stAndPike.dailySalesReport();
-// SeaTac.dailySalesReport();
-// seattleCenter.dailySalesReport();
-// capitolHill.dailySalesReport();
-// Alki.dailySalesReport();
-// makeFooter();
 //
 //
 //
