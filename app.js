@@ -81,33 +81,33 @@ var tableBody = function(){
 };
 tableBody();
 
-// function makeFooter(){
-//   var tableBottom = document.createElement('tfoot');
-//   table.appendChild(tableBottom);
-//   var footerSpace = document.createElement('tr');
-//   var totalCell = document.createElement('td');
-//   totalCell.innerText = 'Daily Totals';
-//   tableBottom.appendChild(totalCell);
-//
-//   for (var i = 0; i < hours.length; i++) {
-//     var totalsByHour = document.createElement('td');
-//     totalsByHour.innerText = storeArray[i].totalCookieSales;
+function makeFooter(){
+  var tableBottom = document.createElement('tfoot');
+  table.appendChild(tableBottom);
+  var footerSpace = document.createElement('tr');
+  var totalCell = document.createElement('td');
+  totalCell.innerText = 'Daily Totals';
+  tableBottom.appendChild(totalCell);
 
-  //   var allSales = 0;
-  //   for (var j = 0; j < storeArray.length; j++) {
-  //     allSales += storeArray[i].soldCookies[j];
-  //   }
-  // var overAllTotal = 0;
-  //   var overAllTotalCell = document.createElement('td');
-  //   overAllTotal += allSales;
-  //   overAllTotalCell.innerText = overAllTotal;
-  //   totalsByHour.innerText = allSales;
-  //   footerSpace.appendChild(totalsByHour);
-  // table.appendChild(tableBottom);
-  // }
-// };
-// makeFooter();
-//
+  for (var i = 0; i < hours.length; i++) {
+    var totalsByHour = document.createElement('td');
+    totalsByHour += storeArray[i].totalCookieSales;
+
+    var allSales = 0;
+    for (var j = 0; j < storeArray.length; j++) {
+      allSales += storeArray[i].soldCookies[j];
+      totalsByHour.innerText += allSales.hours;
+      footerSpace.appendChild(totalsByHour);
+    }
+    var overAllTotal = 0;
+    overAllTotal += allSales;
+    var overAllTotalCell = document.createElement('td');
+    overAllTotalCell.innerText = overAllTotal;
+    table.appendChild(tableBottom);
+  }
+};
+makeFooter();
+
 //
 // function addNewStore(event){
 //   event.preventDefault();
