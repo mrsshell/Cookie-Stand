@@ -32,47 +32,49 @@ var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
 var alki = new Store('Alki', 2, 16, 4.6);
 var storeNames = [stAndPike, seaTac, seattleCenter, capitolHill, alki];
 
-var makeTable = function() {
-  var tableSpot = document.getElementsById('pats-table');
+function makeTable(){
+  var tableSpot = document.getElementById('table-container');
   var tab = document.createElement('table');
-  tab.id = ('table');
+  tab.id = 'table';
   tableSpot.appendChild(tab);
-};
+}
 makeTable();
 
-var makeHeader = function() {
-  var salesHeader = document.getElementById('table');
-  var headerData = document.createElement('th');
-  headerData.id = 'heading';
-  salesHeader.appendChild(headerData);
-  var noData = document.createElement('td');
-  nada.innerText = '';
-  headerData.appendChild(noData);
+function makeHeader(){
+  var findTable = document.getElementById('table');
+  var tHead = document.createElement('thead');
+  var tRow = document.createElement('tr');
+  var emptyCell = document.createElement('td');
+  emptyCell.innerText = '';
+  tRow.appendChild(emptyCell);
   for (var i = 0; i < hours.length; i++) {
-    var open = document.createElement('td');
-    open.innerText = hours[i];
-    headerData.appendChild(open);
+    var tableData = document.createElement('td');
+    tRow.appendChild(tableData);
+    tableData.innerText = hours[i];
   }
-  var endCell = document.createElement('td');
-  endCell.innerText = ('Totals!');
-  headerData.appendChild(endCell);
-  table.appendChild(headerData);
-};
+  var lastCell = document.createElement('td');
+  lastCell.innerText = 'Totals';
+  tRow.appendChild(lastCell);
+  tHead.appendChild(tRow);
+  table.appendChild(tHead);
+}
 makeHeader();
 
-var storeBuilder = function(){
-  var makePatsTable = document.getElementById('heading');
+storeBuilder = function(){
+  var tableBody = document.createElement('table');
+  tableBody.appendChild('tHead');
+
   //make an id
 
   for (var i = 0; i < storeNames.length; i++) {
     var firstRow = document.createElement('tr');
-    newCell.innerText = storeNames[0];
+    var newCell = document.createElement('td');
+    newCell.innerText = storeNames[i].name;
     firstRow.appendChild(newCell);
 
-    for (var i = 0; i < hours.length; i++) {
-      var newCell = document.createElement('td');
+    for (var j = 0; j < hours.length; j++) {
       var dataCell = document.createElement('td');
-      dataCell.innerText = soldCookies[i];
+      dataCell.innerText = soldCookies[j];
       firstRow.appendChild(dataCell);
     }
     var totalsCell = document.createElement('td');
