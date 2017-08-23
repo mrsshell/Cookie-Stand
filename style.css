@@ -46,17 +46,31 @@ header {
   width: 30px;
   }
 
-#idfuture{
-  padding-left:500px
+#idtable-container{
+  box-sizing: border-box;
+  width: 75%;
+  background-color: ##ffffe6;
+  border: 1px #663300;
+  margin:auto;
+  font-family: 'Balthazar', serif;
+  font-size: 20px;
+  color: #663300;
   }
-
+#thead{
+  border: 2px #663300;
+}
+#tbody{
+  border: 1px #663300;
+}
+#tfoot{
+  border: 1px #663300;
+}
 #idform{
   border-width: 30%;
 
 }
 
 .fineprint {
-  font-family: 'Balthazar', serif;
 }
 
 #id{
