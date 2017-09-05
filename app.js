@@ -79,7 +79,6 @@ function makeTable(){
     timeOpen.innerText = storeHours[i];
     tRow.appendChild(timeOpen);
   };
-
   var emptyCell = document.createElement('td');
   emptyCell.innerText = '';
   tRow.appendChild(emptyCell);
