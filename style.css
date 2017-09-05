@@ -3,7 +3,7 @@ header, aside, section, footer,{
   display: block;
   }
 body {
-  background-image: url("http://www.planwallpaper.com/static/images/Light-Wood-Background-Wallpaper.jpg");
+  /*background-image: url("http://www.planwallpaper.com/static/images/Light-Wood-Background-Wallpaper.jpg");*/
   }
 
 header {
