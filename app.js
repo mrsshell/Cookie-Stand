@@ -67,28 +67,37 @@ var storeArray = [stAndPike, seaTac, seattleCenter, capitolHill, alki];
 
 function makeTable(){
   var tableSpot = document.getElementById('table-container');
-  var tab = document.createElement('table');
-  tab.id = 'table';
-  tableSpot.appendChild(tab);
+  var table = document.createElement('table');
+  table.id = 'table';
+  tableSpot.appendChild(table);
   var tRow = document.createElement('tr');
-}
-// makeTable();
+  table.appendChild(tRow);
+  var tHead = document.createElement('thead');
+  tRow.appendChild(tHead);
+  for(var i = 0; i < storeHours.length; i++){
+    var timeOpen = document.createElement('th');
+    timeOpen.innerText = storeHours[i];
+    tRow.appendChild(timeOpen);
+  };
+
+  var emptyCell = document.createElement('td');
+  emptyCell.innerText = '';
+  tRow.appendChild(emptyCell);
+  var lastCell = document.createElement('td');
+  lastCell.innerText = 'Totals';
+  tRow.appendChild(lastCell);
+};
+makeTable();
 
 // function makeHeader(){
 //   var findTable = document.getElementById('table');
 //   var tHead = document.createElement('thead');
 //   var tRow = document.createElement('tr');
-//   var emptyCell = document.createElement('td');
-//   emptyCell.innerText = '';
-//   tRow.appendChild(emptyCell);
 //   for (var i = 0; i < storeHours.length; i++) {
 //     var tableData = document.createElement('td');
 //     tRow.appendChild(tableData);
 //     tableData.innerText = storeHours[i];
 //   }
-//   var lastCell = document.createElement('td');
-//   lastCell.innerText = 'Totals';
-//   tRow.appendChild(lastCell);
 //   tHead.appendChild(tRow);
 //   table.appendChild(tHead);
 // }
