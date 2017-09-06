@@ -10,26 +10,26 @@ function store(name, minCust, maxCust, avgCookies){
   this.total = 0;
   this.hourlyCookies = [];
   this.customersPerHour = function(){
-      var number = Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
-      return number;
-    };
+    var number = Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+    return number;
+  };
 
-    this.calcHourlySales = function(){
-      this.hourlyCookies = [];
-      for (var i = 0; i < hours.length; i++){
-        var hourTotal = Math.round(this.customersPerHour() * this.avgCookies);
-        this.hourlyCookies.push(hourTotal);
-      }
-      return this.hourlyCookies;
-    };
+  this.calcHourlySales = function(){
+    this.hourlyCookies = [];
+    for (var i = 0; i < hours.length; i++){
+      var hourTotal = Math.round(this.customersPerHour() * this.avgCookies);
+      this.hourlyCookies.push(hourTotal);
+    }
+    return this.hourlyCookies;
+  };
 
-    this.calcDailySales = function(){
-      var total = 0;
-      this.calcHourlySales();
-      for (var i = 0; i < this.hourlyCookies.length; i++){
-        this.total += this.hourlyCookies[i];
-      }
-    };
+  this.calcDailySales = function(){
+    var total = 0;
+    this.calcHourlySales();
+    for (var i = 0; i < this.hourlyCookies.length; i++){
+      this.total += this.hourlyCookies[i];
+    }
+  };
   this.salesReport = function(){
     this.calcDailySales();
   };
@@ -99,4 +99,30 @@ var footer = function(){
   grandTotalCell.innerText = grandTotal;
   fRow.appendChild(grandTotalCell);
   table.appendChild(fRow);
+};
+
+function makeNewStore(event){
+  event.preventDefault();
+  var name = event.target.storeName.value;
+  var minCust = parseInt(event.target.minHourly.value);
+  var maxCust = parseInt(event.target.maxHourly.value);
+  var avgCookies = parseFloat(event.target.avgCookies.value);
+  var table = document.getElementById('table-content');
+  var footer = document.getElementById('footer');
+  table.removeChild(footer);
+  var name = new Store(name, minCust, maxCust, avgCookies);
+  name.render();
+  window.footer();
+  form.reset();
+};
+
+var form = document.getElementById('form');
+form.addEventListener('submit', makeNewStore);
+
+function checkMax(event){
+  var max = parseInt(form.maxHourly.value);
+  var min = parseInt(form.minHourly.value);
+  if (max < min){
+    alert('Try Again');
+  }
 };
