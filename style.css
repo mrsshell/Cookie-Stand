@@ -63,9 +63,6 @@ td{
   background-color: #ffffe6;
 }
 
-tr:hover{
-  background-color: #CCC86A;
-}
 input{
     box-sizing: border-box;
     border: 2px solid #49250B;
@@ -86,6 +83,7 @@ input{
 
 #seattle{
   margin: 3%;
+  margin-left: 5%;
   margin-top: 5%;
   max-height: 400px;
   max-width: 700px;
@@ -93,14 +91,14 @@ input{
 }
 
 #cookieCutter{
-  margin-left: 3%;
+  margin-left: 5%;
   display: inline;
   border: 3px solid #49250B;
   height: 276px;
 }
 
 #fishCookie{
-  margin-left: 3%;
+  margin-left: 10%;
   display: inline;
   border: 3px solid #49250B;
   height: 276px;
@@ -109,18 +107,38 @@ input{
 #family{
   margin: 3%;
   margin-top: 5%;
-  margin-left: 0;
-  max-height: 400px;
-  max-width: 475px;
+  margin-left: 10%;
+  height: 400px;
+  max-width: 600px;
+  margin-right: 0;
   border: 3px solid #49250B;
 }
 
 #shirt{
   height: 275px;
   width: 240px;
-  margin-left: 3%;
+  margin-left: 10%;
+  margin-right: 0;
   border: 3px solid #49250B;
 }
-aside{
-  float:right;
+
+h3{
+  font-family: 'Balthazar', serif;
+  color: #49250B;
+  font-size: 40px;
+}
+article{
+  display: block;
+  background-color:#ffffe6;
+  color: #49250B;
+  font-family: 'Balthazar', serif;
+  font-size: 20px;
+  padding: 1%;
+  margin-top: 0;
+  border: 2px solid #49250B;
+  box-sizing: border-box;
+}
+
+#fishes{
+  margin-left: 70%;
 }
