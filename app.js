@@ -30,3 +30,26 @@ function store(name, minCust, maxCust, avgCookies){
         this.total += this.hourlyCookies[i];
       }
     };
+  this.salesReport = function(){
+    this.calcDailySales();
+  };
+  this.salesReport();
+
+  this.render = function(){
+    var table = document.getElementById('table-content');
+    var tRow = document.createElement('tr');
+    var storeName = document.createElement('td');
+    storeName.innerText = this.name;
+    tRow.appendChild(storeName);
+    for (var j = 0; j < hours.length; j++){
+      var soldCookies = document.createElement('td');
+      soldCookies.innerText = this.hourlyCookies[j];
+      tRow.appendChild(soldCookies);
+    }
+    var totalData = document.createElement('td');
+    totalData.innerText = this.total;
+    tRow.appendChild(totalData);
+    table.appendChild(tRow);
+  };
+  stores.push(this);
+};
