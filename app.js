@@ -79,6 +79,12 @@ var header = function(){
   hRow.appendChild(dailyTotal);
 };
 
+function body(){
+  for (var i = 0; i < stores.length; i++){
+    stores[i].render();
+  }
+};
+
 var footer = function(){
   var table = document.getElementById('table-content');
   var fRow = document.createElement('tr');
@@ -102,6 +108,9 @@ var footer = function(){
   fRow.appendChild(grandTotalCell);
   table.appendChild(fRow);
 };
+header();
+body();
+footer();
 
 function createStore(event){
   event.preventDefault();
@@ -129,12 +138,3 @@ function checkMax(event){
 }
 var max = document.getElementById('max');
 max.addEventListener('onblur', checkMax);
-header();
-
-function body(){
-  for (var i = 0; i < stores.length; i++){
-    stores[i].render();
-  }
-};
-body();
-footer();
