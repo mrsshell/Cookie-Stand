@@ -76,3 +76,27 @@ var header = function(){
   dailyTotal.innerText = 'Daily Totals';
   hRow.appendChild(dailyTotal);
 };
+
+var footer = function(){
+  var table = document.getElementById('table-content');
+  var fRow = document.createElement('tr');
+  fRow.id = ('footer');
+  var totalCell = document.createElement('td');
+  totalCell.innerText = 'Hour Totals';
+  fRow.appendChild(totalCell);
+  var grandTotal = 0;
+  for (var i = 0; i < hours.length; i++){
+    var totalHourlyCookies = 0;
+    for (var j = 0; j < stores.length; j++){
+      totalHourlyCookies += stores[j].hourlyCookies[i];
+    };
+    var td = document.createElement('td');
+    td.innerText = totalHourlyCookies;
+    fRow.appendChild(td);
+    grandTotal += totalHourlyCookies;
+  }
+  var grandTotalCell = document.createElement('td');
+  grandTotalCell.innerText = grandTotal;
+  fRow.appendChild(grandTotalCell);
+  table.appendChild(fRow);
+};
