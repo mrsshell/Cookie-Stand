@@ -16,38 +16,35 @@
         <img id="logo" img src="img/chinook.jpg"/>
     </div>
   </header>
-      <section>
-      <div id="table">
-       <!-- <thead id="thead"></thead>
-       <tbody id="tbody"></tbody>
-       <tfoot id="tfoot"></tfoot> -->
-     </div>
-       </section>
-       <form id="form">
-         <table>
-         <fieldset>
-           <legend>New Store</legend>
-           <tr>
-             <td><label for="newStore">Add Store</label></td>
-             <td><input type="text"name="newStore"value=""required/></label></td>
-           </tr>
-           <tr>
-             <td><label for="minCust">Min Customer</label></td>
-             <td><label type="text"value="number"required/></label></td>
-            </tr>
-            <tr>
-             <td><label for="maxCust">Max Customer</label></td>
-             <td><label type="text"value="number"required/></label></td>
-           </tr>
-           <tr>
-             <td><label for="avCookies">Average Sale</label></td>
-             <td><label type="text"value="number"required/></label></td>
-           </tr>
-           <tr><tr>
-             <td><input type="submit"value="submit"/></td>
-         </fieldset>
-       </table>
-     </form>
+    <div id="table">
+      <h1>Pat's Daily Sales</h1>
+        <table id="table-content">
+        </table>
+      </div>
+    <form id = "form">
+      <table id="entryForm">
+        <tr>
+          <td><label for="storeName">Store Name</label></td>
+          <td><input type="text" name="storeName" value="" placeholder="Enter store name" required/></td>
+        </tr>
+        <tr>
+          <td><label for="minCust">Minimum Customers per Hour</label></td>
+          <td id="min"><input type="number" name="minHourly" step="1" value="" placeholder="Enter number" required/></td>
+        </tr>
+        <tr>
+          <td><label for="maxCust">Maximum Customers per Hour</label></td>
+          <td id="max"><input type="number" name="maxHourly" step="1" value="" placeholder="Enter number" required/></td>
+        </tr>
+        <tr>
+          <td><label for="avgCookies">Average Sales per Customer</label></td>
+          <td><input type="number" name="avgCookies" step="0.1" value="" placeholder="Enter number" required/></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" name="create" value="Create store" id="submit"/></td>
+        </tr>
+      </table>
+    </form>
   </body>
-  <script src="app.js" 'text/javascript'></script>
+  <script src="app.js"></script>
 </html>
