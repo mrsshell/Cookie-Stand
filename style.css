@@ -2,63 +2,143 @@
 header, aside, section, footer,{
   display: block;
   }
+
 body {
   background-image: url("http://www.planwallpaper.com/static/images/Light-Wood-Background-Wallpaper.jpg");
   }
 
 header {
-  background-color: #49250B
+  background-color: #49250B;
+  width: 100%;
 }
 
-#top{
+a{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 25px;
+  color: #CCC86A;
+  padding-left: 40px;
+  margin-bottom: 10px;
+}
+
+h1{
   font-family: 'Lobster', cursive;
   font-size: 90px;
   color: #BAF796;
   padding-left: 60px;
   margin: 0;
   padding-top: 20px;
-
 }
 
-#top2{
+h2{
   font-family: 'Rajdhani', sans-serif;
   font-size: 50px;
   color: #CCC86A;
-   padding-left: 60px;
-
+  padding-left: 60px;
   }
-#more{
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 35px;
-  color: #CCC86A;
-  padding-left: 70px;
-  padding-bottom: 30px;
+
+table {
+    border-spacing: 0.2rem;
+    align-content: center;
+  }
+
+td, th {
+  border: 2px solid #49250B;
+  padding: 0.6rem;
+  text-align: center;
 }
+
+th{
+  color: #49250B;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 21px;
+  font-weight: 2px;
+  background-color: #ffffe6;
+}
+
+td{
+  color: #49250B;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  font-weight: 2px;
+  background-color: #ffffe6;
+}
+
+input{
+    box-sizing: border-box;
+    border: 2px solid #49250B;
+    border-radius: 4px;
+}
+#fish{
+  float: left;
+  margin: 4%;
+  margin-left: 20%;
+  border: 2px solid #49250B;
+}
+
+#sal{
+  float: right;
+  width: 40%;
+  margin: 2%;
+}
+
 #seattle{
-  padding-left: 50px;
+  margin: 3%;
+  margin-left: 5%;
+  margin-top: 5%;
   max-height: 400px;
   max-width: 700px;
+  border: 3px solid #49250B;
 }
 
-.
-#logo{
-  float: right;
-  width: 30px;
-  }
-
-#idfuture{
-  padding-left:500px
-  }
-
-#idform{
-  border-width: 30%;
-
+#cookieCutter{
+  margin-left: 5%;
+  display: inline;
+  border: 3px solid #49250B;
+  height: 276px;
 }
 
-.fineprint {
+#fishCookie{
+  margin-left: 10%;
+  display: inline;
+  border: 3px solid #49250B;
+  height: 276px;
+}
+
+#family{
+  margin: 3%;
+  margin-top: 5%;
+  margin-left: 10%;
+  height: 400px;
+  max-width: 600px;
+  margin-right: 0;
+  border: 3px solid #49250B;
+}
+
+#shirt{
+  height: 275px;
+  width: 240px;
+  margin-left: 10%;
+  margin-right: 0;
+  border: 3px solid #49250B;
+}
+
+h3{
   font-family: 'Balthazar', serif;
+  color: #49250B;
+  font-size: 40px;
+}
+article{
+  display: block;
+  background-color:#ffffe6;
+  color: #49250B;
+  font-family: 'Balthazar', serif;
+  font-size: 20px;
+  padding: 1%;
+  margin-top: 0;
+  border: 2px solid #49250B;
+  box-sizing: border-box;
 }
 
-#id{
-
+#fishes{
+  margin-left: 70%;
 }
