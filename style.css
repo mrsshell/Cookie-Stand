@@ -2,6 +2,7 @@
 header, aside, section, footer,{
   display: block;
   }
+
 body {
   /*background-image: url("http://www.planwallpaper.com/static/images/Light-Wood-Background-Wallpaper.jpg");*/
   }
@@ -10,23 +11,22 @@ header {
   background-color: #49250B
 }
 
-#top{
+h1{
   font-family: 'Lobster', cursive;
   font-size: 90px;
   color: #BAF796;
   padding-left: 60px;
   margin: 0;
   padding-top: 20px;
-
 }
 
-#top2{
+h2{
   font-family: 'Rajdhani', sans-serif;
   font-size: 50px;
   color: #CCC86A;
    padding-left: 60px;
-
   }
+
 #more{
   font-family: 'Rajdhani', sans-serif;
   font-size: 35px;
@@ -34,45 +34,14 @@ header {
   padding-left: 70px;
   padding-bottom: 30px;
 }
+
 #seattle{
   padding-left: 50px;
   max-height: 400px;
   max-width: 700px;
 }
 
-.
 #logo{
   float: right;
   width: 30px;
   }
-
-#idtable-container{
-  box-sizing: border-box;
-  width: 75%;
-  background-color: ##ffffe6;
-  border: 1px #663300;
-  margin:auto;
-  font-family: 'Balthazar', serif;
-  font-size: 20px;
-  color: #663300;
-  }
-#thead{
-  border: 2px #663300;
-}
-#tbody{
-  border: 1px #663300;
-}
-#tfoot{
-  border: 1px #663300;
-}
-#idform{
-  border-width: 30%;
-
-}
-
-.fineprint {
-}
-
-#id{
-
-}

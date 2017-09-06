@@ -1,14 +1,16 @@
 'use strict';
+
 var stores = [];
 var hours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
 
-function store(name, minCust, maxCust, avgCookies){
+function Store(name, minCust, maxCust, avgCookies){
   this.name = name;
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgCookies = avgCookies;
   this.total = 0;
   this.hourlyCookies = [];
+
   this.customersPerHour = function(){
     var number = Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
     return number;
@@ -33,6 +35,7 @@ function store(name, minCust, maxCust, avgCookies){
   this.salesReport = function(){
     this.calcDailySales();
   };
+
   this.salesReport();
 
   this.render = function(){
@@ -53,6 +56,7 @@ function store(name, minCust, maxCust, avgCookies){
   };
   stores.push(this);
 };
+
 var stAndPike = new Store('1st and Pike', 23, 65, 6.3);
 var seaTac = new Store('SeaTac Airport', 3, 24, 1.2);
 var seattleCennter = new Store('Seattle Center', 11, 38, 3.7);
@@ -101,7 +105,7 @@ var footer = function(){
   table.appendChild(fRow);
 };
 
-function makeNewStore(event){
+function createStore(event){
   event.preventDefault();
   var name = event.target.storeName.value;
   var minCust = parseInt(event.target.minHourly.value);
@@ -115,14 +119,24 @@ function makeNewStore(event){
   window.footer();
   form.reset();
 };
-
 var form = document.getElementById('form');
-form.addEventListener('submit', makeNewStore);
+form.addEventListener('submit', createStore);
 
 function checkMax(event){
   var max = parseInt(form.maxHourly.value);
   var min = parseInt(form.minHourly.value);
   if (max < min){
-    alert('Try Again');
+    alert('wrong!');
+  };
+}
+var max = document.getElementById('max');
+max.addEventListener('onblur', checkMax);
+
+header();
+function body(){
+  for (var i = 0; i < stores.length; i++){
+    stores[i].render();
   }
 };
+body();
+footer();
