@@ -67,10 +67,8 @@ var header = function(){
   var table = document.getElementById('table-content');
   var hRow = document.createElement('tr');
   table.appendChild(hRow);
-
   var emptyCell = document.createElement('th');
   hRow.appendChild(emptyCell);
-
   for (var i = 0; i < hours.length; i++){
     var cellHeaders = document.createElement('th');
     cellHeaders.innerText = hours[i];
@@ -86,7 +84,7 @@ var footer = function(){
   var fRow = document.createElement('tr');
   fRow.id = ('footer');
   var totalCell = document.createElement('td');
-  totalCell.innerText = 'Hour Totals';
+  totalCell.innerText = 'Hourly Totals';
   fRow.appendChild(totalCell);
   var grandTotal = 0;
   for (var i = 0; i < hours.length; i++){
@@ -131,8 +129,8 @@ function checkMax(event){
 }
 var max = document.getElementById('max');
 max.addEventListener('onblur', checkMax);
-
 header();
+
 function body(){
   for (var i = 0; i < stores.length; i++){
     stores[i].render();
