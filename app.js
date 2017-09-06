@@ -53,8 +53,26 @@ function store(name, minCust, maxCust, avgCookies){
   };
   stores.push(this);
 };
-var stAndPike = new store('1st and Pike', 23, 65, 6.3);
-var seaTac = new store('SeaTac Airport', 3, 24, 1.2);
-var seattleCennter = new store('Seattle Center', 11, 38, 3.7);
-var capitolHill = new store('Capitol Hill', 20, 38, 2.3);
-var alki = new store('Alki', 2, 16, 4.6);
+var stAndPike = new Store('1st and Pike', 23, 65, 6.3);
+var seaTac = new Store('SeaTac Airport', 3, 24, 1.2);
+var seattleCennter = new Store('Seattle Center', 11, 38, 3.7);
+var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
+var alki = new Store('Alki', 2, 16, 4.6);
+
+var header = function(){
+  var table = document.getElementById('table-content');
+  var hRow = document.createElement('tr');
+  table.appendChild(hRow);
+
+  var emptyCell = document.createElement('th');
+  hRow.appendChild(emptyCell);
+
+  for (var i = 0; i < hours.length; i++){
+    var cellHeaders = document.createElement('th');
+    cellHeaders.innerText = hours[i];
+    hRow.appendChild(cellHeaders);
+  }
+  var dailyTotal = document.createElement('th');
+  dailyTotal.innerText = 'Daily Totals';
+  hRow.appendChild(dailyTotal);
+};
