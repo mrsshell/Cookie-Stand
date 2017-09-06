@@ -53,3 +53,8 @@ function store(name, minCust, maxCust, avgCookies){
   };
   stores.push(this);
 };
+var stAndPike = new store('1st and Pike', 23, 65, 6.3);
+var seaTac = new store('SeaTac Airport', 3, 24, 1.2);
+var seattleCennter = new store('Seattle Center', 11, 38, 3.7);
+var capitolHill = new store('Capitol Hill', 20, 38, 2.3);
+var alki = new store('Alki', 2, 16, 4.6);
