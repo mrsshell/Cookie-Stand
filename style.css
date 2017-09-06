@@ -81,27 +81,46 @@ input{
 #sal{
   float: right;
   width: 40%;
-  /*margin-bottom: 2%;*/
   margin: 2%;
-}
-#entry{
-  float: right;
-}
-#more{
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 35px;
-  color: #CCC86A;
-  padding-left: 70px;
-  padding-bottom: 30px;
 }
 
 #seattle{
-  padding-left: 50px;
+  margin: 3%;
+  margin-top: 5%;
   max-height: 400px;
   max-width: 700px;
+  border: 3px solid #49250B;
 }
 
-#logo{
-  float: right;
-  width: 30px;
-  }
+#cookieCutter{
+  margin-left: 3%;
+  display: inline;
+  border: 3px solid #49250B;
+  height: 276px;
+}
+
+#fishCookie{
+  margin-left: 3%;
+  display: inline;
+  border: 3px solid #49250B;
+  height: 276px;
+}
+
+#family{
+  margin: 3%;
+  margin-top: 5%;
+  margin-left: 0;
+  max-height: 400px;
+  max-width: 475px;
+  border: 3px solid #49250B;
+}
+
+#shirt{
+  height: 275px;
+  width: 240px;
+  margin-left: 3%;
+  border: 3px solid #49250B;
+}
+aside{
+  float:right;
+}
