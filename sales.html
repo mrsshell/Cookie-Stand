@@ -12,7 +12,7 @@
     <header>
       <img id="sal" src="images\salmon.png">
     <h1>Pat's Daily Sales</h1>
-    <h2>More to Come</h2>
+    <h2>More Stores to Come</h2>
     <a href="index.html">Home Page</a>
   </header>
     <table id="table-content">
@@ -26,15 +26,15 @@
         </tr>
         <tr>
           <td><label for="minHourly">Minimum Customers</label></td>
-          <td id="min"><input type="number" name="minHourly" step="1" value="" placeholder="Enter number" required/></td>
+          <td id="min"><input type="number" name="minHourly" min="1" step="1" value="" placeholder="Enter number" required/></td>
         </tr>
         <tr>
           <td><label for="maxHourly">Maximum Customers</label></td>
-          <td id="max"><input type="number" name="maxHourly" step="1" value="" placeholder="Enter number" required/></td>
+          <td id="max"><input type="number" name="maxHourly" min="1" step="1" value="" placeholder="Enter number" required/></td>
         </tr>
         <tr>
           <td><label for="avgCookies">Average Sales per Customer</label></td>
-          <td><input type="number" name="avgCookies" step="0.1" value="" placeholder="Enter number" required/></td>
+          <td><input type="number" name="avgCookies" min="0.5" step="0.5" value="" placeholder="Enter number" required/></td>
         </tr>
         <tr>
           <td></td>
