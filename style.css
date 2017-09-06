@@ -4,11 +4,20 @@ header, aside, section, footer,{
   }
 
 body {
-  /*background-image: url("http://www.planwallpaper.com/static/images/Light-Wood-Background-Wallpaper.jpg");*/
+  background-image: url("http://www.planwallpaper.com/static/images/Light-Wood-Background-Wallpaper.jpg");
   }
 
 header {
-  background-color: #49250B
+  background-color: #49250B;
+  width: 100%;
+}
+
+a{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 25px;
+  color: #CCC86A;
+  padding-left: 40px;
+  margin-bottom: 10px;
 }
 
 h1{
@@ -24,9 +33,47 @@ h2{
   font-family: 'Rajdhani', sans-serif;
   font-size: 50px;
   color: #CCC86A;
-   padding-left: 60px;
+  padding-left: 60px;
   }
 
+table {
+    border-spacing: 0.2rem;
+    align-content: center;
+  }
+
+td, th {
+  border: 2px solid #49250B;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+th{
+  color: #49250B;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 21px;
+  font-weight: 2px;
+  background-color: #ffffe6;
+}
+
+td{
+  color: #49250B;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  font-weight: 2px;
+  background-color: #ffffe6;
+}
+
+tr:hover{
+  background-color: #CCC86A;
+}
+input{
+    box-sizing: border-box;
+    border: 2px solid #49250B;
+    border-radius: 4px;
+}
+#entry{
+  float: right;
+}
 #more{
   font-family: 'Rajdhani', sans-serif;
   font-size: 35px;
